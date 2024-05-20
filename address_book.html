@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ubone - Furniture Store</title>
+  <link rel="icon" type="image/x-icon" href="./images/logos/favicon.png">
+  <link rel="stylesheet" href="./icons/tabler-icons.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+  <!-- add to cart canvas -->
+  <div class="offcanvas offcanvas-end" id="addtocart">
+    <div class="offcanvas-header">
+      <h4>Shopping Cart</h4>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_1.webp" alt="Wooden Dining Table">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Wooden Dining Table</h5>
+          <p class="addtocart_product_text">$49.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_2.webp" alt="Leather Sofa">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Leather Sofa</h5>
+          <p class="addtocart_product_text">$59.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_3.webp" alt="Bedside Table">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Bedside Table</h5>
+          <p class="addtocart_product_text">$69.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_4.webp" alt="Comfortable Chair">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Comfortable Chair</h5>
+          <p class="addtocart_product_text">$79.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_5.webp" alt="Bookshelf">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Bookshelf</h5>
+          <p class="addtocart_product_text">$89.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+    </div>
+    <div class="offcanvas-footer">
+      <div class="cart_total">
+        <span>Sub Total</span>
+        <strong>$19.25</strong>
+      </div>
+      <a href="#" class="button">
+        <span>Checkout</span>
+      </a>
+      <a href="cart.html" class="viewall_cart">
+        <span>View all cart</span>
+      </a>
+    </div>
+  </div>
+  <!-- end of add to cart canvas -->
+  <!-- banner -->
+  <div class="banner hide">
+    <div class="container">
+      <div class="banner_main">
+        <h5>60 months</h5>
+        <p>Interest free financing</p>
+        <a href="#">See if you prequalify</a>
+      </div>
+    </div>
+    <i class="ti ti-x"></i>
+  </div>
+  <!-- end of banner -->
+  <!-- header -->
+  <header>
+    <div class="header_top">
+      <div class="container">
+        <div class="header_top_container">
+          <a href="index.html" class="logo">
+            <img src="images/logos/logo.svg" alt="Logo">
+          </a>
+          <form class="search">
+            <div class="search_box">
+              <input class="search_input" type="search" placeholder="Search products">
+              <i class="ti ti-search"></i>
+            </div>
+            <div class="search_result">
+              <button class="search_result_close">
+                <i class="ti ti-x"></i>
+              </button>
+              <div class="container">
+                <div class="search_keywords_wrapper">
+                  <h4>Search keywords: <span></span></h4>
+                  <div class="search_keywords">
+                    <a href="#" class="keyword">Apple</a>
+                    <a href="#" class="keyword">Microwave</a>
+                    <a href="#" class="keyword">iPhone14</a>
+                    <a href="#" class="keyword">Smartwatch</a>
+                    <a href="#" class="keyword">Macbook Pro</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="header_icons">
+            <button class="header_icon search_icon">
+              <i class="ti ti-search"></i>
+            </button>
+            <a href="login.html" class="header_icon login">
+              <i class="ti ti-user"></i>
+            </a>
+            <button class="header_icon" data-value="0">
+              <i class="ti ti-heart"></i>
+            </button>
+            <button class="header_icon" data-value="0" data-bs-toggle="offcanvas" data-bs-target="#addtocart">
+              <i class="ti ti-shopping-bag"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header_bottom">
+      <div class="container">
+        <div class="header_bottom_container">
+          <button class="button menu_btn">
+            <i class="ti ti-menu-2"></i>
+          </button>
+          <nav class="navbar">
+            <ul class="menu">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="single_category.html">Living Rooms</a></li>
+              <li><a href="single_category.html">Dining Rooms</a></li>
+              <li><a href="single_category.html">Bedrooms</a></li>
+              <li><a href="single_category.html">Mattress</a></li>
+              <li><a href="single_category.html">Patio</a></li>
+              <li><a href="single_category.html">Kids & Teens</a></li>
+              <li><a href="single_category.html">Rugs & Decor</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about_us.html">About Us</a></li>
+              <li><a href="contact_us.html">Contact Us</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Pages</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="faq's.html">FAQ's</a></li>
+                  <li><a class="dropdown-item" href="refund_policy.html">Refund Policy</a></li>
+                  <li><a class="dropdown-item" href="shipping_&_return.html">Shipping & Return</a></li>
+                  <li><a class="dropdown-item" href="store_location.html">Store Location</a></li>
+                  <li><a class="dropdown-item" href="privacy_policy.html">Privacy Policy</a></li>
+                  <li><a class="dropdown-item" href="terms_&_condition.html">Terms & Condition</a></li>
+                  <li><a class="dropdown-item" href="page_not_found.html">Page Not Found</a></li>
+                  <li><a class="dropdown-item" href="my_account.html">My Account</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end of header -->
+  <!-- main -->
+  <main>
+    <section class="account">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h2 class="heading_title">My account</h2>
+            </div>
+            <div class="account_wrapper">
+              <div class="account_sidebar">
+                <ul class="account_list">
+                  <li>
+                    <a href="my_account.html">
+                      <i class="ti ti-user-circle"></i>
+                      <span>My account</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="active" href="address_book.html">
+                      <i class="ti ti-map-pin"></i>
+                      <span>My address book</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="orders.html">
+                      <i class="ti ti-shopping-bag"></i>
+                      <span>My orders</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="account_main">
+                <h4>you'er Addresses</h4>
+                <div class="row mb-4">
+                  <div class="col-lg-4 mb-lg-0 mb-3">
+                    <div class="card address_card">
+                      <div class="card-header">Home Address</div>
+                      <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text">
+                          <ul class="address_list">
+                            <li>
+                              <i class="ti ti-map-pin mr-2"></i>
+                              <span>123 Main Street</span>
+                            </li>
+                            <li>
+                              <i class="ti ti-building-skyscraper mr-2"></i>
+                              <span>City: Lahore</span>
+                            </li>
+                            <li>
+                              <i class="ti ti-world mr-2"></i>
+                              <span>Country: Pakistan</span>
+                            </li>
+                            <li>
+                              <i class="ti ti-mail mr-2"></i>
+                              <span>Zip Code: 54000</span>
+                            </li>
+                          </ul>
+                        </p>
+                        <div class="mt-4">
+                          <button class="button outline me-1">
+                            <span>Edit</span>
+                          </button>
+                          <button class="button">
+                            <span>Delete</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 mb-lg-0 mb-3">
+                    <div class="card address_card">
+                      <div class="card-header">Work Address</div>
+                      <div class="card-body">
+                        <h5 class="card-title">Jane Smith</h5>
+                        <p class="card-text">
+                          <ul class="address_list">
+                            <li>
+                              <i class="ti ti-map-pin mr-2"></i>
+                              <span>456 Park Avenue</span>
+                            </li>
+                            <li>
+                              <i class="ti ti-building-skyscraper mr-2"></i>
+                              <span>City: Karachi</span>
+                            </li>
+                            <li>
+                              <i class="ti ti-world mr-2"></i>
+                              <span>Country: Pakistan</span>
+                            </li>
+                            <li>
+                              <i class="ti ti-mail mr-2"></i>
+                              <span>Zip Code: 75000</span>
+                            </li>
+                          </ul>
+                        </p>
+                        <div class="mt-4">
+                          <button class="button outline me-1">
+                            <span>Edit</span>
+                          </button>
+                          <button class="button">
+                            <span>Delete</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 mb-lg-0 mb-3">
+                    <div class="card address_card">
+                      <div class="card-header">Office Address</div>
+                      <div class="card-body">
+                        <h5 class="card-title">James Brown</h5>
+                        <p class="card-text">
+                          <ul class="address_list">
+                            <li>
+                              <i class="ti ti-map-pin mr-2"></i>
+                              <span>789 Business Road</span>
+                            </li>
+                            <li>
+                              <i class="ti ti-building-skyscraper mr-2"></i>
+                              <span>City: Islamabad</span>
+                            </li>
+                            <li>
+                              <i class="ti ti-world mr-2"></i>
+                              <span>Country: Pakistan</span>
+                            </li>
+                            <li>
+                              <i class="ti ti-mail mr-2"></i>
+                              <span>Zip Code: 44000</span>
+                            </li>
+                          </ul>
+                        </p>
+                        <div class="mt-4">
+                          <button class="button outline me-1">
+                            <span>Edit</span>
+                          </button>
+                          <button class="button">
+                            <span>Delete</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h4>Add Address</h4>
+                <form class="account_form">
+                  <div class="form-row">
+                    <h5>Personal Information</h5>
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <p>When signing up on an e-commerce site, share your name, email, and phone. Keep your info secure. Enter details accurately for smooth account management.</p>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="mb-3">
+                          <label for="addressTitle" class="form-label">Address Title</label>
+                          <input type="text" class="form-control" id="addressTitle" placeholder="eg. My Home">
+                        </div>
+                        <div class="mb-3">
+                          <label for="name" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="name" placeholder="eg. Kowalski">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="mb-3">
+                          <label for="phone" class="form-label">Phone Number</label>
+                          <input type="tel" class="form-control" id="phone" placeholder="eg. +1234567890">
+                        </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Email Address</label>
+                          <input type="email" class="form-control" id="email" placeholder="eg. example@example.com">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="d-flex align-items-center justify-content-end gap-2">
+                        <button class="button">
+                          <span>Save</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <h5>Address Information</h5>
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <div class="mb-3">
+                          <label for="addressLine1" class="form-label">Address Line 1</label>
+                          <input type="text" class="form-control" id="addressLine1" placeholder="eg. 123 Main St">
+                        </div>
+                        <div class="mb-3">
+                          <label for="addressLine2" class="form-label">Address Line 2</label>
+                          <input type="text" class="form-control" id="addressLine2" placeholder="eg. Apt 101">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="mb-3">
+                          <label for="city" class="form-label">City</label>
+                          <input type="text" class="form-control" id="city" placeholder="Enter your city">
+                        </div>
+                        <div class="mb-3">
+                          <label for="state" class="form-label">State/Province</label>
+                          <input type="text" class="form-control" id="state" placeholder="Enter your state/province">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="mb-3">
+                          <label for="zip" class="form-label">Zip/Postal Code</label>
+                          <input type="text" class="form-control" id="zip" placeholder="Enter your ZIP code/postal code">
+                        </div>
+                        <div class="mb-3">
+                          <label for="country" class="form-label">Country</label>
+                          <input type="text" class="form-control" id="country" placeholder="Enter your country">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="d-flex align-items-center justify-content-end gap-2">
+                        <button class="button">
+                          <span>Save</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- end main -->
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer_main">
+            <div class="footer_column site_profile">
+              <a href="index.html" class="logo">
+                <img src="images/logos/logo.svg" alt="">
+              </a>
+              <hgroup>
+                <h5 class="footer_contact_no">(+800) 1234 5678 90</h5>
+                <p class="footer_address">62 North Helen Street Green Cove, FL 3204</p>
+              </hgroup>
+              <ul class="footer_contact_list">
+                <li>
+                  <span>Phone: </span>
+                  <a href="#">+123 456 7890</a>
+                </li>
+                <li>
+                  <span>Email: </span>
+                  <a href="#">example@gmail.com</a>
+                </li>
+                <li>
+                  <span>Follow Us : </span>
+                  <ul class="social_links">
+                    <li>
+                      <i class="ti ti-brand-facebook"></i>
+                    </li>
+                    <li>
+                      <i class="ti ti-brand-x"></i>
+                    </li>
+                    <li>
+                      <i class="ti ti-brand-instagram"></i>
+                    </li>
+                    <li>
+                      <i class="ti ti-brand-pinterest"></i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="footer_column footer_links">
+              <h4 class="footer_heading">information</h4>
+              <ul class="footer_list">
+                <li><a href="#" class="footer_link">About Us</a></li>
+                <li><a href="#" class="footer_link">Furniture Business</a></li>
+                <li><a href="#" class="footer_link">Help & Advice</a></li>
+                <li><a href="#" class="footer_link">Contact Us</a></li>
+                <li><a href="#" class="footer_link">Furniture Magazine</a></li>
+                <li><a href="#" class="footer_link">Gift Vouchers</a></li>
+                <li><a href="#" class="footer_link">FR Collections</a></li>
+                <li><a href="#" class="footer_link">Gallery</a></li>
+                <li><a href="#" class="footer_link">Purchase Protection</a></li>
+                <li><a href="#" class="footer_link">Brands</a></li>
+                <li><a href="#" class="footer_link">Meet Experts</a></li>
+                <li><a href="#" class="footer_link">Help Topics</a></li>
+              </ul>
+            </div>
+            <div class="footer_column subscribe_container">
+              <h4 class="footer_heading">Your Daily Source for New Offers and Best Deals!</h4>
+              <form class="subscribe">
+                <div class="subscribe_wrapper">
+                  <input type="email" placeholder="Enter your email" />
+                  <button class="button">
+                    <span>subscribe</span>
+                  </button>
+                </div>
+              </form>
+              <h4 class="footer_heading payment_method_heading">Payment methods</h4>
+              <div class="footer_payment_methods">
+                <figure class="method">
+                  <img src="images/payments/visa.svg" alt="visa" />
+                </figure>
+                <figure class="method">
+                  <img src="images/payments/amex.svg" alt="amex" />
+                </figure>
+                <figure class="method">
+                  <img src="images/payments/mastercard.svg" alt="mastercard" />
+                </figure>
+                <figure class="method">
+                  <img src="images/payments/elo.svg" alt="elo" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_copyright">
+      <div class="container">
+        <p class="copyright">@ 2024, Hayyan Ali Powered by HTML</p>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+  <script src="./js/jquery.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-ui.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

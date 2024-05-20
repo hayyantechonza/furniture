@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ubone - Furniture Store</title>
+  <link rel="icon" type="image/x-icon" href="./images/logos/favicon.png">
+  <link rel="stylesheet" href="./icons/tabler-icons.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/jquery-ui.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+  <!-- add to cart canvas -->
+  <div class="offcanvas offcanvas-end" id="addtocart">
+    <div class="offcanvas-header">
+      <h4>Shopping Cart</h4>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_1.webp" alt="Wooden Dining Table">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Wooden Dining Table</h5>
+          <p class="addtocart_product_text">$49.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_2.webp" alt="Leather Sofa">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Leather Sofa</h5>
+          <p class="addtocart_product_text">$59.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_3.webp" alt="Bedside Table">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Bedside Table</h5>
+          <p class="addtocart_product_text">$69.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_4.webp" alt="Comfortable Chair">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Comfortable Chair</h5>
+          <p class="addtocart_product_text">$79.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_5.webp" alt="Bookshelf">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Bookshelf</h5>
+          <p class="addtocart_product_text">$89.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+    </div>
+    <div class="offcanvas-footer">
+      <div class="cart_total">
+        <span>Sub Total</span>
+        <strong>$19.25</strong>
+      </div>
+      <a href="#" class="button">
+        <span>Checkout</span>
+      </a>
+      <a href="cart.html" class="viewall_cart">
+        <span>View all cart</span>
+      </a>
+    </div>
+  </div>
+  <!-- end of add to cart canvas -->
+  <!-- banner -->
+  <div class="banner hide">
+    <div class="container">
+      <div class="banner_main">
+        <h5>60 months</h5>
+        <p>Interest free financing</p>
+        <a href="#">See if you prequalify</a>
+      </div>
+    </div>
+    <i class="ti ti-x"></i>
+  </div>
+  <!-- end of banner -->
+  <!-- header -->
+  <header>
+    <div class="header_top">
+      <div class="container">
+        <div class="header_top_container">
+          <a href="index.html" class="logo">
+            <img src="images/logos/logo.svg" alt="Logo">
+          </a>
+          <form class="search">
+            <div class="search_box">
+              <input class="search_input" type="search" placeholder="Search products">
+              <i class="ti ti-search"></i>
+            </div>
+            <div class="search_result">
+              <button class="search_result_close">
+                <i class="ti ti-x"></i>
+              </button>
+              <div class="container">
+                <div class="search_keywords_wrapper">
+                  <h4>Search keywords: <span></span></h4>
+                  <div class="search_keywords">
+                    <a href="#" class="keyword">Apple</a>
+                    <a href="#" class="keyword">Microwave</a>
+                    <a href="#" class="keyword">iPhone14</a>
+                    <a href="#" class="keyword">Smartwatch</a>
+                    <a href="#" class="keyword">Macbook Pro</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="header_icons">
+            <button class="header_icon search_icon">
+              <i class="ti ti-search"></i>
+            </button>
+            <a href="login.html" class="header_icon login">
+              <i class="ti ti-user"></i>
+            </a>
+            <button class="header_icon" data-value="0">
+              <i class="ti ti-heart"></i>
+            </button>
+            <button class="header_icon" data-value="0" data-bs-toggle="offcanvas" data-bs-target="#addtocart">
+              <i class="ti ti-shopping-bag"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header_bottom">
+      <div class="container">
+        <div class="header_bottom_container">
+          <button class="button menu_btn">
+            <i class="ti ti-menu-2"></i>
+          </button>
+          <nav class="navbar">
+            <ul class="menu">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="single_category.html">Living Rooms</a></li>
+              <li><a href="single_category.html">Dining Rooms</a></li>
+              <li><a href="single_category.html">Bedrooms</a></li>
+              <li><a href="single_category.html">Mattress</a></li>
+              <li><a href="single_category.html">Patio</a></li>
+              <li><a href="single_category.html">Kids & Teens</a></li>
+              <li><a href="single_category.html">Rugs & Decor</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about_us.html">About Us</a></li>
+              <li><a href="contact_us.html">Contact Us</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Pages</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="faq's.html">FAQ's</a></li>
+                  <li><a class="dropdown-item" href="refund_policy.html">Refund Policy</a></li>
+                  <li><a class="dropdown-item" href="shipping_&_return.html">Shipping & Return</a></li>
+                  <li><a class="dropdown-item" href="store_location.html">Store Location</a></li>
+                  <li><a class="dropdown-item" href="privacy_policy.html">Privacy Policy</a></li>
+                  <li><a class="dropdown-item" href="terms_&_condition.html">Terms & Condition</a></li>
+                  <li><a class="dropdown-item" href="page_not_found.html">Page Not Found</a></li>
+                  <li><a class="dropdown-item" href="my_account.html">My Account</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end of header -->
+  <!-- main -->
+  <main>
+    <!-- breadcrumb -->
+    <section class="breadcrumb_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <figure class="breadcrumb_img">
+              <img src="images/banners/banner_9.webp" alt="">
+            </figure>
+            <div class="breadcrumb_content">
+              <h4 class="page_heading">Living Rooms</h4>
+              <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- shop page -->
+    <section class="shop_page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="shop_page_main">
+              <div class="filter_sidebar">
+                <div class="filter_side_item">
+                  <h5 class="filter_side_heading">Filter</h5>
+                  <div class="filter_tags">
+                    <button class="filter_tag">
+                      <span class="filter_value">Darkred</span>
+                      <i class="ti ti-x"></i>
+                    </button>
+                    <button class="filter_tag">
+                      <span class="filter_value">Small</span>
+                      <i class="ti ti-x"></i>
+                    </button>
+                    <button class="filter_tag">
+                      <span class="filter_value">Sofa</span>
+                      <i class="ti ti-x"></i>
+                    </button>
+                    <button class="filter_tag">
+                      <span class="filter_value">In Stock</span>
+                      <i class="ti ti-x"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="filter_side_item">
+                  <h5 class="filter_side_heading">Price filter</h5>
+                  <div class="price_slide_wrapper">
+                    <div class="highest_price">
+                      <p></p>
+                      <button class="price_rest">Reset</button>
+                    </div>
+                    <div class="price_slider">
+                      <div id="slider-range"></div>
+                    </div>
+                    <div class="price_inputs">
+                      <label for="" class="price_input min_value">
+                        <span>$</span>
+                        <input type="number" placeholder="eg.50" />
+                      </label>
+                      <label for="" class="price_input max_value">
+                        <span>$</span>
+                        <input type="number" placeholder="eg.50" />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter_side_item">
+                  <h5 class="filter_side_heading">Categories</h5>
+                  <div class="filter_checkList">
+                    <label for="sofa" class="filter_check">
+                      <input type="checkbox" id="sofa" />
+                      <span>Sofa</span>
+                      <small>(37)</small>
+                    </label>
+                    <label for="coffee_table" class="filter_check">
+                      <input type="checkbox" id="coffee_table" />
+                      <span>Coffee Table</span>
+                      <small>(42)</small>
+                    </label>
+                    <label for="tv_stand" class="filter_check">
+                      <input type="checkbox" id="tv_stand" />
+                      <span>TV Stand</span>
+                      <small>(29)</small>
+                    </label>
+                    <label for="bookshelf" class="filter_check">
+                      <input type="checkbox" id="bookshelf" />
+                      <span>Bookshelf</span>
+                      <small>(31)</small>
+                    </label>
+                    <label for="rug" class="filter_check">
+                      <input type="checkbox" id="rug" />
+                      <span>Rug</span>
+                      <small>(27)</small>
+                    </label>
+                    <label for="lamp" class="filter_check">
+                      <input type="checkbox" id="lamp" />
+                      <span>Lamp</span>
+                      <small>(33)</small>
+                    </label>
+                    <label for="accent_chair" class="filter_check">
+                      <input type="checkbox" id="accent_chair" />
+                      <span>Accent Chair</span>
+                      <small>(36)</small>
+                    </label>
+                    <label for="ottoman" class="filter_check">
+                      <input type="checkbox" id="ottoman" />
+                      <span>Ottoman</span>
+                      <small>(30)</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="filter_side_item">
+                  <h5 class="filter_side_heading">Availability</h5>
+                  <div class="filter_checkList">
+                    <label for="in_stock" class="filter_check">
+                      <input type="checkbox" id="in_stock" />
+                      <span>In stock</span>
+                      <small>(198)</small>
+                    </label>
+                    <label for="out_of_stock" class="filter_check">
+                      <input type="checkbox" id="out_of_stock" />
+                      <span>Out of stock</span>
+                      <small>(79)</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="filter_side_item">
+                  <h5 class="filter_side_heading">Color Filter</h5>
+                  <div class="color_filter">
+                    <label for="86aab0" style="background: #86aab0;">
+                      <input type="checkbox" id="86aab0" value="#86aab0">
+                    </label>
+                    <label for="ba957d" style="background: #ba957d;">
+                      <input type="checkbox" id="ba957d" value="#ba957d">
+                    </label>
+                    <label for="a52a2a" style="background: #a52a2a;">
+                      <input type="checkbox" id="a52a2a" value="#a52a2a">
+                    </label>
+                    <label for="b87145" style="background: #b87145;">
+                      <input type="checkbox" id="b87145" value="#b87145">
+                    </label>
+                    <label for="cdd1c6" style="background: #cdd1c6;">
+                      <input type="checkbox" id="cdd1c6" value="#cdd1c6">
+                    </label>
+                    <label for="cc6666" style="background: #cc6666;">
+                      <input type="checkbox" id="cc6666" value="#cc6666">
+                    </label>
+                    <label for="72a6d8" style="background: #72a6d8;">
+                      <input type="checkbox" id="72a6d8" value="#72a6d8">
+                    </label>
+                    <label for="e0b756" style="background: #e0b756;">
+                      <input type="checkbox" id="e0b756" value="#e0b756">
+                    </label>
+                    <label for="6e6963" style="background: #6e6963;">
+                      <input type="checkbox" id="6e6963" value="#6e6963">
+                    </label>
+                    <label for="93a6b0" style="background: #93a6b0;">
+                      <input type="checkbox" id="93a6b0" value="#93a6b0">
+                    </label>
+                    <label for="719297" style="background: #719297;">
+                      <input type="checkbox" id="719297" value="#719297">
+                    </label>
+                    <label for="66cdaa" style="background: #66cdaa;">
+                      <input type="checkbox" id="66cdaa" value="#66cdaa">
+                    </label>
+                    <label for="e7e7e7" style="background: #e7e7e7;">
+                      <input type="checkbox" id="e7e7e7" value="#e7e7e7">
+                    </label>
+                    <label for="b58555" style="background: #b58555;">
+                      <input type="checkbox" id="b58555" value="#b58555">
+                    </label>
+                  </div>
+                </div>
+                <div class="filter_side_item">
+                  <h5 class="filter_side_heading">Sizes</h5>
+                  <div class="filter_checkList">
+                    <label for="small" class="filter_check">
+                      <input type="checkbox" id="small" />
+                      <span>Small</span>
+                      <small>(10)</small>
+                    </label>
+                    <label for="Medium" class="filter_check">
+                      <input type="checkbox" id="Medium" />
+                      <span>Medium</span>
+                      <small>(30)</small>
+                    </label>
+                    <label for="Large" class="filter_check">
+                      <input type="checkbox" id="Large" />
+                      <span>Large</span>
+                      <small>(50)</small>
+                    </label>
+                    <label for="ExtraLarge" class="filter_check">
+                      <input type="checkbox" id="ExtraLarge" />
+                      <span>ExtraLarge</span>
+                      <small>(70)</small>
+                    </label>
+                    <label for="1kg" class="filter_check">
+                      <input type="checkbox" id="1kg" />
+                      <span>1kg</span>
+                      <small>(50)</small>
+                    </label>
+                    <label for="2kg" class="filter_check">
+                      <input type="checkbox" id="2kg" />
+                      <span>2kg</span>
+                      <small>(60)</small>
+                    </label>
+                    <label for="3kg" class="filter_check">
+                      <input type="checkbox" id="3kg" />
+                      <span>3kg</span>
+                      <small>(70)</small>
+                    </label>
+                    <label for="4kg" class="filter_check">
+                      <input type="checkbox" id="4kg" />
+                      <span>4kg</span>
+                      <small>(90)</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="all_products">
+                <!-- <div class="all_products_head">
+                  <div class="products_layout_filter">
+                    <button class="button filter_btn">
+                      <i class="ti ti-filter"></i>
+                      <span>filter</span>
+                    </button>
+                    <button class="layout_filter_btn">
+                      <i class="ti ti-layout-grid"></i>
+                    </button>
+                    <button class="layout_filter_btn">
+                      <i class="ti ti-list"></i>
+                    </button>
+                  </div>
+                </div> -->
+                <div class="home_deals_products">
+                  <div class="product-card">
+                    <div class="product-card-head">
+                      <div class="product-action">
+                        <span class="ti ti-eye quick-view"></span>
+                        <span class="ti ti-heart add-wishlist"></span>
+                      </div>
+                      <a href="#">
+                        <figure>
+                          <img src="images/products/product_1.webp" alt="Product Image">
+                        </figure>
+                      </a>
+                      <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                        <span>Add to Cart</span>
+                      </button>
+                    </div>
+                    <div class="details">
+                      <a href="single_product.html">
+                        <h3>Wooden Dining Table</h3>
+                      </a>
+                      <p class="price">$249.99</p>
+                      <div class="stock-status out-stock">Sold out</div>
+                      <div class="color-variations">
+                        <span style="background-color: #836953;"></span>
+                        <span style="background-color: #000000;"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-card-head">
+                      <div class="product-action">
+                        <span class="ti ti-eye quick-view"></span>
+                        <span class="ti ti-heart add-wishlist"></span>
+                      </div>
+                      <a href="#">
+                        <figure>
+                          <img src="images/products/product_2.webp" alt="Product Image">
+                        </figure>
+                      </a>
+                      <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                        <span>Add to Cart</span>
+                      </button>
+                    </div>
+                    <div class="details">
+                      <a href="single_product.html">
+                        <h3>Leather Sofa Set</h3>
+                      </a>
+                      <p class="price">$799.99</p>
+                      <div class="stock-status in-stock">in Stock</div>
+                      <div class="color-variations">
+                        <span style="background-color: #333333;"></span>
+                        <span style="background-color: #b7b7b7;"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-card-head">
+                      <div class="product-action">
+                        <span class="ti ti-eye quick-view"></span>
+                        <span class="ti ti-heart add-wishlist"></span>
+                      </div>
+                      <a href="#">
+                        <figure>
+                          <img src="images/products/product_3.webp" alt="Product Image">
+                        </figure>
+                      </a>
+                      <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                        <span>Add to Cart</span>
+                      </button>
+                    </div>
+                    <div class="details">
+                      <a href="single_product.html">
+                        <h3>Modern Coffee Table</h3>
+                      </a>
+                      <p class="price">$149.99</p>
+                      <div class="stock-status in-stock">in Stock</div>
+                      <div class="color-variations">
+                        <span style="background-color: #ffffff;"></span>
+                        <span style="background-color: #333333;"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-card-head">
+                      <div class="product-action">
+                        <span class="ti ti-eye quick-view"></span>
+                        <span class="ti ti-heart add-wishlist"></span>
+                      </div>
+                      <a href="#">
+                        <figure>
+                          <img src="images/products/product_4.webp" alt="Product Image">
+                        </figure>
+                      </a>
+                      <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                        <span>Add to Cart</span>
+                      </button>
+                    </div>
+                    <div class="details">
+                      <a href="single_product.html">
+                        <h3>Antique Wooden Chair</h3>
+                      </a>
+                      <p class="price">$99.99</p>
+                      <div class="stock-status in-stock">in Stock</div>
+                      <div class="color-variations">
+                        <span style="background-color: #543b39;"></span>
+                        <span style="background-color: #a28b7c;"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-card-head">
+                      <div class="product-action">
+                        <span class="ti ti-eye quick-view"></span>
+                        <span class="ti ti-heart add-wishlist"></span>
+                      </div>
+                      <a href="#">
+                        <figure>
+                          <img src="images/products/product_5.webp" alt="Product Image">
+                        </figure>
+                      </a>
+                      <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                        <span>Add to Cart</span>
+                      </button>
+                    </div>
+                    <div class="details">
+                      <a href="single_product.html">
+                        <h3>Modern TV Stand</h3>
+                      </a>
+                      <p class="price">$299.99</p>
+                      <div class="stock-status out-stock">Sold out</div>
+                      <div class="color-variations">
+                        <span style="background-color: #333333;"></span>
+                        <span style="background-color: #ffffff;"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-card-head">
+                      <div class="product-action">
+                        <span class="ti ti-eye quick-view"></span>
+                        <span class="ti ti-heart add-wishlist"></span>
+                      </div>
+                      <a href="#">
+                        <figure>
+                          <img src="images/products/product_6.webp" alt="Product Image">
+                        </figure>
+                      </a>
+                      <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                        <span>Add to Cart</span>
+                      </button>
+                    </div>
+                    <div class="details">
+                      <a href="single_product.html">
+                        <h3>Classic Armchair</h3>
+                      </a>
+                      <p class="price">$199.99</p>
+                      <div class="stock-status out-stock">Sold out</div>
+                      <div class="color-variations">
+                        <span style="background-color: #7b6d64;"></span>
+                        <span style="background-color: #b4a7a2;"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-card-head">
+                      <div class="product-action">
+                        <span class="ti ti-eye quick-view"></span>
+                        <span class="ti ti-heart add-wishlist"></span>
+                      </div>
+                      <a href="#">
+                        <figure>
+                          <img src="images/products/product_7.webp" alt="Product Image">
+                        </figure>
+                      </a>
+                      <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                        <span>Add to Cart</span>
+                      </button>
+                    </div>
+                    <div class="details">
+                      <a href="single_product.html">
+                        <h3>Rustic Bookshelf</h3>
+                      </a>
+                      <p class="price">$149.99</p>
+                      <div class="stock-status in-stock">in Stock</div>
+                      <div class="color-variations">
+                        <span style="background-color: #3a352e;"></span>
+                        <span style="background-color: #8a7d6f;"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-card-head">
+                      <div class="product-action">
+                        <span class="ti ti-eye quick-view"></span>
+                        <span class="ti ti-heart add-wishlist"></span>
+                      </div>
+                      <a href="#">
+                        <figure>
+                          <img src="images/products/product_8.webp" alt="Product Image">
+                        </figure>
+                      </a>
+                      <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                        <span>Add to Cart</span>
+                      </button>
+                    </div>
+                    <div class="details">
+                      <a href="single_product.html">
+                        <h3>Contemporary Desk</h3>
+                      </a>
+                      <p class="price">$179.99</p>
+                      <div class="stock-status out-stock">Sold out</div>
+                      <div class="color-variations">
+                        <span style="background-color: #ffffff;"></span>
+                        <span style="background-color: #333333;"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-card-head">
+                      <div class="product-action">
+                        <span class="ti ti-eye quick-view"></span>
+                        <span class="ti ti-heart add-wishlist"></span>
+                      </div>
+                      <a href="#">
+                        <figure>
+                          <img src="images/products/product_9.webp" alt="Product Image">
+                        </figure>
+                      </a>
+                      <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                        <span>Add to Cart</span>
+                      </button>
+                    </div>
+                    <div class="details">
+                      <a href="single_product.html">
+                        <h3>Velvet Ottoman</h3>
+                      </a>
+                      <p class="price">$79.99</p>
+                      <div class="stock-status in-stock">in Stock</div>
+                      <div class="color-variations">
+                        <span style="background-color: #6b4950;"></span>
+                        <span style="background-color: #a6868c;"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-card-head">
+                      <div class="product-action">
+                        <span class="ti ti-eye quick-view"></span>
+                        <span class="ti ti-heart add-wishlist"></span>
+                      </div>
+                      <a href="#">
+                        <figure>
+                          <img src="images/products/product_10.webp" alt="Product Image">
+                        </figure>
+                      </a>
+                      <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                        <span>Add to Cart</span>
+                      </button>
+                    </div>
+                    <div class="details">
+                      <a href="single_product.html">
+                        <h3>Industrial Bar Stool</h3>
+                      </a>
+                      <p class="price">$89.99</p>
+                      <div class="stock-status in-stock">in Stock</div>
+                      <div class="color-variations">
+                        <span style="background-color: #333333;"></span>
+                        <span style="background-color: #b7b7b7;"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pagination">
+                  <a href="#" class="prev">
+                    <i class="ti ti-chevron-left"></i>
+                  </a>
+                  <a href="#" class="active">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#" class="next">
+                    <i class="ti ti-chevron-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- end main -->
+  <!-- quick view modal -->
+  <div class="modal fade" id="quickView">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="quick_view_container">
+          <div class="swiper quick_view_slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="quick_view_img">
+                  <img src="images/products/product_1.webp" alt="product 1">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="quick_view_img">
+                  <img src="images/products/product_2.webp" alt="product 2">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="quick_view_img">
+                  <img src="images/products/product_3.webp" alt="product 3">
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="quick_view_content">
+            <h4 class="quick_view_title">Wooden Dining Table</h4>
+            <span class="quick_view_price">$99.9</span>
+            <p class="quick_view_desc">This Wooden Dining Table comes with a classical and elegant design that adds a new charm and sophistication to your dining area. Its solid wood construction guarantees durability and longevity, while its smooth finish enhances its aesthetic appeal.</p>
+            <div class="quick_view_variant">
+              <small>colors: </small>
+              <div class="color-variations">
+                <span style="background-color: #a6868c;"></span>
+                <span style="background-color: #6b4950;"></span>
+              </div>
+            </div>
+            <div class="quick_view_actions">
+              <button class="button adc">
+                <i class="ti ti-garden-cart"></i>
+                <span>Add to cart</span>
+              </button>
+              <button class="button">
+                <span>Buy now</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end quick view modal -->
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer_main">
+            <div class="footer_column site_profile">
+              <a href="index.html" class="logo">
+                <img src="images/logos/logo.svg" alt="">
+              </a>
+              <hgroup>
+                <h5 class="footer_contact_no">(+800) 1234 5678 90</h5>
+                <p class="footer_address">62 North Helen Street Green Cove, FL 3204</p>
+              </hgroup>
+              <ul class="footer_contact_list">
+                <li>
+                  <span>Phone: </span>
+                  <a href="#">+123 456 7890</a>
+                </li>
+                <li>
+                  <span>Email: </span>
+                  <a href="#">example@gmail.com</a>
+                </li>
+                <li>
+                  <span>Follow Us : </span>
+                  <ul class="social_links">
+                    <li>
+                      <i class="ti ti-brand-facebook"></i>
+                    </li>
+                    <li>
+                      <i class="ti ti-brand-x"></i>
+                    </li>
+                    <li>
+                      <i class="ti ti-brand-instagram"></i>
+                    </li>
+                    <li>
+                      <i class="ti ti-brand-pinterest"></i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="footer_column footer_links">
+              <h4 class="footer_heading">information</h4>
+              <ul class="footer_list">
+                <li><a href="#" class="footer_link">About Us</a></li>
+                <li><a href="#" class="footer_link">Furniture Business</a></li>
+                <li><a href="#" class="footer_link">Help & Advice</a></li>
+                <li><a href="#" class="footer_link">Contact Us</a></li>
+                <li><a href="#" class="footer_link">Furniture Magazine</a></li>
+                <li><a href="#" class="footer_link">Gift Vouchers</a></li>
+                <li><a href="#" class="footer_link">FR Collections</a></li>
+                <li><a href="#" class="footer_link">Gallery</a></li>
+                <li><a href="#" class="footer_link">Purchase Protection</a></li>
+                <li><a href="#" class="footer_link">Brands</a></li>
+                <li><a href="#" class="footer_link">Meet Experts</a></li>
+                <li><a href="#" class="footer_link">Help Topics</a></li>
+              </ul>
+            </div>
+            <div class="footer_column subscribe_container">
+              <h4 class="footer_heading">Your Daily Source for New Offers and Best Deals!</h4>
+              <form class="subscribe">
+                <div class="subscribe_wrapper">
+                  <input type="email" placeholder="Enter your email" />
+                  <button class="button">
+                    <span>subscribe</span>
+                  </button>
+                </div>
+              </form>
+              <h4 class="footer_heading payment_method_heading">Payment methods</h4>
+              <div class="footer_payment_methods">
+                <figure class="method">
+                  <img src="images/payments/visa.svg" alt="visa" />
+                </figure>
+                <figure class="method">
+                  <img src="images/payments/amex.svg" alt="amex" />
+                </figure>
+                <figure class="method">
+                  <img src="images/payments/mastercard.svg" alt="mastercard" />
+                </figure>
+                <figure class="method">
+                  <img src="images/payments/elo.svg" alt="elo" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_copyright">
+      <div class="container">
+        <p class="copyright">@ @ 2024, Hayyan Ali Powered by HTML</p>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+  <script src="./js/jquery.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-ui.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

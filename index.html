@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ubone - Furniture Store</title>
+  <link rel="icon" type="image/x-icon" href="./images/logos/favicon.png">
+  <link rel="stylesheet" href="./icons/tabler-icons.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+  <!-- add to cart canvas -->
+  <div class="offcanvas offcanvas-end" id="addtocart">
+    <div class="offcanvas-header">
+      <h4>Shopping Cart</h4>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_1.webp" alt="Wooden Dining Table">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Wooden Dining Table</h5>
+          <p class="addtocart_product_text">$49.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_2.webp" alt="Leather Sofa">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Leather Sofa</h5>
+          <p class="addtocart_product_text">$59.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_3.webp" alt="Bedside Table">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Bedside Table</h5>
+          <p class="addtocart_product_text">$69.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_4.webp" alt="Comfortable Chair">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Comfortable Chair</h5>
+          <p class="addtocart_product_text">$79.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_5.webp" alt="Bookshelf">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Bookshelf</h5>
+          <p class="addtocart_product_text">$89.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+    </div>
+    <div class="offcanvas-footer">
+      <div class="cart_total">
+        <span>Sub Total</span>
+        <strong>$19.25</strong>
+      </div>
+      <a href="#" class="button">
+        <span>Checkout</span>
+      </a>
+      <a href="cart.html" class="viewall_cart">
+        <span>View all cart</span>
+      </a>
+    </div>
+  </div>
+  <!-- end of add to cart canvas -->
+  <!-- banner -->
+  <div class="banner hide">
+    <div class="container">
+      <div class="banner_main">
+        <h5>60 months</h5>
+        <p>Interest free financing</p>
+        <a href="#">See if you prequalify</a>
+      </div>
+    </div>
+    <i class="ti ti-x"></i>
+  </div>
+  <!-- end of banner -->
+  <!-- header -->
+  <header>
+    <div class="header_top">
+      <div class="container">
+        <div class="header_top_container">
+          <a href="index.html" class="logo">
+            <img src="images/logos/logo.svg" alt="Logo">
+          </a>
+          <form class="search">
+            <div class="search_box">
+              <input class="search_input" type="search" placeholder="Search products">
+              <i class="ti ti-search"></i>
+            </div>
+            <div class="search_result">
+              <button class="search_result_close">
+                <i class="ti ti-x"></i>
+              </button>
+              <div class="container">
+                <div class="search_keywords_wrapper">
+                  <h4>Search keywords: <span></span></h4>
+                  <div class="search_keywords">
+                    <a href="#" class="keyword">Apple</a>
+                    <a href="#" class="keyword">Microwave</a>
+                    <a href="#" class="keyword">iPhone14</a>
+                    <a href="#" class="keyword">Smartwatch</a>
+                    <a href="#" class="keyword">Macbook Pro</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="header_icons">
+            <button class="header_icon search_icon">
+              <i class="ti ti-search"></i>
+            </button>
+            <a href="login.html" class="header_icon login">
+              <i class="ti ti-user"></i>
+            </a>
+            <button class="header_icon" data-value="0">
+              <i class="ti ti-heart"></i>
+            </button>
+            <button class="header_icon" data-value="0" data-bs-toggle="offcanvas" data-bs-target="#addtocart">
+              <i class="ti ti-shopping-bag"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header_bottom">
+      <div class="container">
+        <div class="header_bottom_container">
+          <button class="button menu_btn">
+            <i class="ti ti-menu-2"></i>
+          </button>
+          <nav class="navbar">
+            <ul class="menu">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="single_category.html">Living Rooms</a></li>
+              <li><a href="single_category.html">Dining Rooms</a></li>
+              <li><a href="single_category.html">Bedrooms</a></li>
+              <li><a href="single_category.html">Mattress</a></li>
+              <li><a href="single_category.html">Patio</a></li>
+              <li><a href="single_category.html">Kids & Teens</a></li>
+              <li><a href="single_category.html">Rugs & Decor</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about_us.html">About Us</a></li>
+              <li><a href="contact_us.html">Contact Us</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Pages</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="faq's.html">FAQ's</a></li>
+                  <li><a class="dropdown-item" href="refund_policy.html">Refund Policy</a></li>
+                  <li><a class="dropdown-item" href="shipping_&_return.html">Shipping & Return</a></li>
+                  <li><a class="dropdown-item" href="store_location.html">Store Location</a></li>
+                  <li><a class="dropdown-item" href="privacy_policy.html">Privacy Policy</a></li>
+                  <li><a class="dropdown-item" href="terms_&_condition.html">Terms & Condition</a></li>
+                  <li><a class="dropdown-item" href="page_not_found.html">Page Not Found</a></li>
+                  <li><a class="dropdown-item" href="my_account.html">My Account</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end of header -->
+  <!-- main -->
+  <main>
+    <!-- hero -->
+    <section class="hero">
+      <div class="hero_wrapper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="container">
+                <div class="hero_content">
+                  <hgroup>
+                    <span class="discount_text">Up to 70% Off!</span>
+                    <h1 class="hero_banner_title webkit_box">Biggest Sofa Sale of the Year</h1>
+                    <p class="hero_banner_desc webkit_box">Elevate your relaxation experience with our opulent arm chairs. Impeccably crafted for both comfort and style, these luxurious pieces promise to redefine your home's ambiance. Explore sophistication and comfort like never before.</p>
+                  </hgroup>
+                  <div class="cta_button_group">
+                    <button href="#" class="banner_cta button">
+                      <span>Shop Now</span>
+                      <i class="ti ti-arrow-up-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <figure class="hero_product_img">
+                <img src="images/banners/banner_2.webp" alt="Arm Chair">
+              </figure>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="container">
+                <div class="hero_content">
+                  <hgroup>
+                    <span class="discount_text">Up to 40% Off!</span>
+                    <h1 class="hero_banner_title webkit_box">Exclusive Sofa Collection</h1>
+                    <p class="hero_banner_desc webkit_box">Elevate your relaxation experience with our opulent arm chairs. Impeccably crafted for both comfort and style, these luxurious pieces promise to redefine your home's ambiance. Explore sophistication and comfort like never before.</p>
+                  </hgroup>
+                  <div class="cta_button_group">
+                    <button href="#" class="banner_cta button">
+                      <span>Discover More</span>
+                      <i class="ti ti-arrow-up-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <figure class="hero_product_img">
+                <img src="images/banners/banner_3.webp" alt="Modern Sofa Set">
+              </figure>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="container">
+                <div class="hero_content">
+                  <hgroup>
+                    <span class="discount_text">Up to 45% Off!</span>
+                    <h1 class="hero_banner_title webkit_box">Upgrade Your Living Room</h1>
+                    <p class="hero_banner_desc webkit_box">Elevate your relaxation experience with our opulent arm chairs. Impeccably crafted for both comfort and style, these luxurious pieces promise to redefine your home's ambiance. Explore sophistication and comfort like never before.</p>
+                  </hgroup>
+                  <div class="cta_button_group">
+                    <button href="#" class="banner_cta button">
+                      <span>Shop Now</span>
+                      <i class="ti ti-arrow-up-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <figure class="hero_product_img">
+                <img src="images/banners/banner_4.webp" alt="Sectional Sofa">
+              </figure>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of hero -->
+    <!-- shop by category -->
+    <section class="categories">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h2 class="heading_title">Shop by Categories</h2>
+              <div class="category_swiper_buttons">
+                <div class="swiper-button-prev arrows"></div>
+                <div class="swiper-button-next arrows"></div>
+              </div>
+            </div>
+            <div class="categories_grid swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_1.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Furniture</h4>
+                      <p class="category_items_length">25 items</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_2.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Tables & Desks</h4>
+                      <p class="category_items_length">19 items</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_3.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Bedding</h4>
+                      <p class="category_items_length">23 items</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_4.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Tools</h4>
+                      <p class="category_items_length">19 items</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_5.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Kitchen</h4>
+                      <p class="category_items_length">21 items</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_6.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Baby & Kids</h4>
+                      <p class="category_items_length">12 items</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_7.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Home Textiles</h4>
+                      <p class="category_items_length">20 items</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_8.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Home Decor</h4>
+                      <p class="category_items_length">22 items</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_9.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Lighting</h4>
+                      <p class="category_items_length">15 items</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_10.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Cookware</h4>
+                      <p class="category_items_length">19 items</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_11.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Bathroom</h4>
+                      <p class="category_items_length">7 items</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_12.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Pet Accessories</h4>
+                      <p class="category_items_length">151 items</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_13.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Outdoor</h4>
+                      <p class="category_items_length">151 items</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="single_category.html" class="category_item">
+                    <figure class="category_img">
+                      <img src="images/categories/category_14.webp" alt="">
+                    </figure>
+                    <div class="category_content">
+                      <h4 class="category_title webkit_box">Laundry</h4>
+                      <p class="category_items_length">11 items</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end shop by category -->
+    <!-- marquee animation -->
+    <section class="marquee_section">
+      <div class="marquee">
+        <h4>
+          <span>Designer winter collection</span>
+          <i class="ti ti-asterisk"></i>
+        </h4>
+      </div>
+    </section>
+    <!-- end marquee animation -->
+    <!-- sale deal banenr -->
+    <section class="deal_banner no_p">
+      <div class="deal_slider swiper">
+        <div class="swiper-wrapper">
+          <!-- Banner 1 -->
+          <div class="swiper-slide">
+            <a href="#" class="deal_banner_item">
+              <figure class="deal_banner_img">
+                <img src="images/banners/banner_1.webp" alt="">
+              </figure>
+              <div class="deal_banner_content">
+                <p class="deal_banner_offer">Up to 50% off on Sofas</p>
+                <h4 class="deal_banner_title">Upgrade your living room</h4>
+                <button class="button">
+                  <span>Shop now</span>
+                  <i class="ti ti-arrow-right"></i>
+                </button>
+              </div>
+            </a>
+          </div>
+          <!-- Banner 2 -->
+          <div class="swiper-slide">
+            <a href="#" class="deal_banner_item">
+              <figure class="deal_banner_img">
+                <img src="images/banners/banner_2.webp" alt="">
+              </figure>
+              <div class="deal_banner_content">
+                <p class="deal_banner_offer">Enjoy discounts on Dining Tables</p>
+                <h4 class="deal_banner_title">Enhance your dining experience</h4>
+                <button class="button">
+                  <span>Shop now</span>
+                  <i class="ti ti-arrow-right"></i>
+                </button>
+              </div>
+            </a>
+          </div>
+          <!-- Banner 3 -->
+          <div class="swiper-slide">
+            <a href="#" class="deal_banner_item">
+              <figure class="deal_banner_img">
+                <img src="images/banners/banner_3.webp" alt="">
+              </figure>
+              <div class="deal_banner_content">
+                <p class="deal_banner_offer">Save big on Bedroom Sets</p>
+                <h4 class="deal_banner_title">Transform your bedroom</h4>
+                <button class="button">
+                  <span>Shop now</span>
+                  <i class="ti ti-arrow-right"></i>
+                </button>
+              </div>
+            </a>
+          </div>
+          <!-- Banner 4 -->
+          <div class="swiper-slide">
+            <a href="#" class="deal_banner_item">
+              <figure class="deal_banner_img">
+                <img src="images/banners/banner_4.webp" alt="">
+              </figure>
+              <div class="deal_banner_content">
+                <p class="deal_banner_offer">Get cozy with Lounge Chairs</p>
+                <h4 class="deal_banner_title">Relax in style</h4>
+                <button class="button">
+                  <span>Shop now</span>
+                  <i class="ti ti-arrow-right"></i>
+                </button>
+              </div>
+            </a>
+          </div>
+          <!-- Banner 5 -->
+          <div class="swiper-slide">
+            <a href="#" class="deal_banner_item">
+              <figure class="deal_banner_img">
+                <img src="images/banners/banner_5.webp" alt="">
+              </figure>
+              <div class="deal_banner_content">
+                <p class="deal_banner_offer">Spruce up your workspace</p>
+                <h4 class="deal_banner_title">Office Furniture on Sale</h4>
+                <button class="button">
+                  <span>Shop now</span>
+                  <i class="ti ti-arrow-right"></i>
+                </button>
+              </div>
+            </a>
+          </div>
+          <!-- Banner 6 -->
+          <div class="swiper-slide">
+            <a href="#" class="deal_banner_item">
+              <figure class="deal_banner_img">
+                <img src="images/banners/banner_6.webp" alt="">
+              </figure>
+              <div class="deal_banner_content">
+                <p class="deal_banner_offer">Revamp your kitchen</p>
+                <h4 class="deal_banner_title">Kitchen Essentials Sale</h4>
+                <button class="button">
+                  <span>Shop now</span>
+                  <i class="ti ti-arrow-right"></i>
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end sale deal banenr -->
+    <!-- extra offers -->
+    <section class="extra_offers">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h2 class="heading_title">extra offers with purchase</h2>
+              <a href="#" class="button">
+                <span>view all</span>
+                <i class="ti ti-arrow-right"></i>
+              </a>
+            </div>
+            <div class="extra_offers_main">
+              <a href="#" class="extra_offer_banner">
+                <figure class="extra_offer_banner_img">
+                  <img src="images/banners/banner_9.webp" alt="">
+                </figure>
+              </a>
+              <div class="home_deals_products extra_offers_products">
+                <div class="product-card">
+                  <div class="product-card-head">
+                    <div class="product-action">
+                      <span class="ti ti-eye quick-view"></span>
+                      <span class="ti ti-heart add-wishlist"></span>
+                    </div>
+                    <a href="#">
+                      <figure>
+                        <img src="images/products/product_1.webp" alt="Product Image">
+                      </figure>
+                    </a>
+                    <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                      <span>Add to Cart</span>
+                    </button>
+                  </div>
+                  <div class="details">
+                    <a href="#">
+                      <h3>Modern Sofa</h3>
+                    </a>
+                    <p class="price">$299.99</p>
+                    <div class="stock-status in-stock">In Stock</div>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-card-head">
+                    <div class="product-action">
+                      <span class="ti ti-eye quick-view"></span>
+                      <span class="ti ti-heart add-wishlist"></span>
+                    </div>
+                    <a href="#">
+                      <figure>
+                        <img src="images/products/product_2.webp" alt="Product Image">
+                      </figure>
+                    </a>
+                    <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                      <span>Add to Cart</span>
+                    </button>
+                  </div>
+                  <div class="details">
+                    <a href="#">
+                      <h3>Vintage Armchair</h3>
+                    </a>
+                    <p class="price">$199.99</p>
+                    <div class="stock-status in-stock">In Stock</div>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-card-head">
+                    <div class="product-action">
+                      <span class="ti ti-eye quick-view"></span>
+                      <span class="ti ti-heart add-wishlist"></span>
+                    </div>
+                    <a href="#">
+                      <figure>
+                        <img src="images/products/product_3.webp" alt="Product Image">
+                      </figure>
+                    </a>
+                    <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                      <span>Add to Cart</span>
+                    </button>
+                  </div>
+                  <div class="details">
+                    <a href="#">
+                      <h3>Retro Coffee Table</h3>
+                    </a>
+                    <p class="price">$149.99</p>
+                    <div class="stock-status in-stock">In Stock</div>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-card-head">
+                    <div class="product-action">
+                      <span class="ti ti-eye quick-view"></span>
+                      <span class="ti ti-heart add-wishlist"></span>
+                    </div>
+                    <a href="#">
+                      <figure>
+                        <img src="images/products/product_4.webp" alt="Product Image">
+                      </figure>
+                    </a>
+                    <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                      <span>Add to Cart</span>
+                    </button>
+                  </div>
+                  <div class="details">
+                    <a href="#">
+                      <h3>Industrial Bookshelf</h3>
+                    </a>
+                    <p class="price">$259.99</p>
+                    <div class="stock-status out-stock">Sold Out</div>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-card-head">
+                    <div class="product-action">
+                      <span class="ti ti-eye quick-view"></span>
+                      <span class="ti ti-heart add-wishlist"></span>
+                    </div>
+                    <a href="#">
+                      <figure>
+                        <img src="images/products/product_5.webp" alt="Product Image">
+                      </figure>
+                    </a>
+                    <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                      <span>Add to Cart</span>
+                    </button>
+                  </div>
+                  <div class="details">
+                    <a href="#">
+                      <h3>Minimalist Desk Lamp</h3>
+                    </a>
+                    <p class="price">$39.99</p>
+                    <div class="stock-status in-stock">In Stock</div>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-card-head">
+                    <div class="product-action">
+                      <span class="ti ti-eye quick-view"></span>
+                      <span class="ti ti-heart add-wishlist"></span>
+                    </div>
+                    <a href="#">
+                      <figure>
+                        <img src="images/products/product_6.webp" alt="Product Image">
+                      </figure>
+                    </a>
+                    <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                      <span>Add to Cart</span>
+                    </button>
+                  </div>
+                  <div class="details">
+                    <a href="#">
+                      <h3>Classic Dining Chair</h3>
+                    </a>
+                    <p class="price">$129.99</p>
+                    <div class="stock-status in-stock">In Stock</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end extra offers -->
+    <!-- interest free -->
+    <section class="interest_free">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="interest_free_wrapper">
+              <figure class="interest_free_img">
+                <img src="images/others/interest_free.svg" alt="">
+              </figure>
+              <div class="interest_free_content">
+                <hgroup>
+                  <h2 class="interest_free_title">Interest-Free Comfort Starts Here.</h2>
+                  <p class="interest_free_desc">With Ubon's interest-free financing options, you can bring home the furniture you love today without worrying about interest.</p>
+                </hgroup>
+                <a href="#" class="button">
+                  <span>find out more</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end interest free -->
+    <!-- Shop by item -->
+    <section class="shop_items">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="shop_item_grid">
+              <div class="shop_item_heading">
+                <span>Shop By Items</span>
+                <h4>Trending Now</h4>
+                <p>Our resident expert, Dayna Isom Johnson, reveals the freshest trends you need to know</p>
+                <a href="shop.html" class="text_btn">
+                  <span>View all items</span>
+                  <i class="ti ti-arrow-right"></i>
+                </a>
+              </div>
+              <a href="shop.html" class="shop_item">
+                <figure class="shop_item_img">
+                  <img src="images/items/item_1.webp" alt="Henna Sofa">
+                </figure>
+                <span>upto 30% off</span>
+                <div class="shop_item_content">
+                  <h4 class="shop_item_title">Henna Sofa</h4>
+                  <p class="shop_item_length">(2 items)</p>
+                </div>
+              </a>
+              <a href="shop.html" class="shop_item">
+                <figure class="shop_item_img">
+                  <img src="images/items/item_2.webp" alt="Colorful Chair">
+                </figure>
+                <span>upto 30% off</span>
+                <div class="shop_item_content">
+                  <h4 class="shop_item_title">Colorful Chair</h4>
+                  <p class="shop_item_length">(3 items)</p>
+                </div>
+              </a>
+              <a href="shop.html" class="shop_item">
+                <figure class="shop_item_img">
+                  <img src="images/items/item_3.webp" alt="Elegant Couch">
+                </figure>
+                <span>upto 30% off</span>
+                <div class="shop_item_content">
+                  <h4 class="shop_item_title">Elegant Couch</h4>
+                  <p class="shop_item_length">(4 items)</p>
+                </div>
+              </a>
+              <a href="shop.html" class="shop_item">
+                <figure class="shop_item_img">
+                  <img src="images/items/item_4.webp" alt="Modern Ottoman">
+                </figure>
+                <span>upto 30% off</span>
+                <div class="shop_item_content">
+                  <h4 class="shop_item_title">Modern Ottoman</h4>
+                  <p class="shop_item_length">(5 items)</p>
+                </div>
+              </a>
+              <a href="shop.html" class="shop_item">
+                <figure class="shop_item_img">
+                  <img src="images/items/item_5.webp" alt="Vintage Loveseat">
+                </figure>
+                <span>upto 30% off</span>
+                <div class="shop_item_content">
+                  <h4 class="shop_item_title">Vintage Loveseat</h4>
+                  <p class="shop_item_length">(6 items)</p>
+                </div>
+              </a>
+              <a href="shop.html" class="shop_item">
+                <figure class="shop_item_img">
+                  <img src="images/items/item_6.webp" alt="Cozy Recliner">
+                </figure>
+                <span>upto 30% off</span>
+                <div class="shop_item_content">
+                  <h4 class="shop_item_title">Cozy Recliner</h4>
+                  <p class="shop_item_length">(7 items)</p>
+                </div>
+              </a>
+              <a href="shop.html" class="shop_item">
+                <figure class="shop_item_img">
+                  <img src="images/items/item_7.webp" alt="Futuristic Sofa">
+                </figure>
+                <span>upto 30% off</span>
+                <div class="shop_item_content">
+                  <h4 class="shop_item_title">Futuristic Sofa</h4>
+                  <p class="shop_item_length">(8 items)</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end Shop by item -->
+    <!-- deals -->
+    <section class="home_deals">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h2 class="heading_title">special weekend deals!</h2>
+              <a href="#" class="button">
+                <span>view all</span>
+                <i class="ti ti-arrow-right"></i>
+              </a>
+            </div>
+            <div class="home_deals_products">
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_1.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Wooden Dining Table</h3>
+                  </a>
+                  <p class="price">$249.99</p>
+                  <div class="stock-status out-stock">Sold out</div>
+                  <div class="color-variations">
+                    <span style="background-color: #836953;"></span>
+                    <span style="background-color: #000000;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_2.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Leather Sofa Set</h3>
+                  </a>
+                  <p class="price">$799.99</p>
+                  <div class="stock-status in-stock">in Stock</div>
+                  <div class="color-variations">
+                    <span style="background-color: #333333;"></span>
+                    <span style="background-color: #b7b7b7;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_3.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Modern Coffee Table</h3>
+                  </a>
+                  <p class="price">$149.99</p>
+                  <div class="stock-status in-stock">in Stock</div>
+                  <div class="color-variations">
+                    <span style="background-color: #ffffff;"></span>
+                    <span style="background-color: #333333;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_4.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Antique Wooden Chair</h3>
+                  </a>
+                  <p class="price">$99.99</p>
+                  <div class="stock-status in-stock">in Stock</div>
+                  <div class="color-variations">
+                    <span style="background-color: #543b39;"></span>
+                    <span style="background-color: #a28b7c;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_5.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Modern TV Stand</h3>
+                  </a>
+                  <p class="price">$299.99</p>
+                  <div class="stock-status out-stock">Sold out</div>
+                  <div class="color-variations">
+                    <span style="background-color: #333333;"></span>
+                    <span style="background-color: #ffffff;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_6.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Classic Armchair</h3>
+                  </a>
+                  <p class="price">$199.99</p>
+                  <div class="stock-status out-stock">Sold out</div>
+                  <div class="color-variations">
+                    <span style="background-color: #7b6d64;"></span>
+                    <span style="background-color: #b4a7a2;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_7.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Rustic Bookshelf</h3>
+                  </a>
+                  <p class="price">$149.99</p>
+                  <div class="stock-status in-stock">in Stock</div>
+                  <div class="color-variations">
+                    <span style="background-color: #3a352e;"></span>
+                    <span style="background-color: #8a7d6f;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_8.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Contemporary Desk</h3>
+                  </a>
+                  <p class="price">$179.99</p>
+                  <div class="stock-status out-stock">Sold out</div>
+                  <div class="color-variations">
+                    <span style="background-color: #ffffff;"></span>
+                    <span style="background-color: #333333;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_9.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Velvet Ottoman</h3>
+                  </a>
+                  <p class="price">$79.99</p>
+                  <div class="stock-status in-stock">in Stock</div>
+                  <div class="color-variations">
+                    <span style="background-color: #6b4950;"></span>
+                    <span style="background-color: #a6868c;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_10.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Industrial Bar Stool</h3>
+                  </a>
+                  <p class="price">$89.99</p>
+                  <div class="stock-status in-stock">in Stock</div>
+                  <div class="color-variations">
+                    <span style="background-color: #333333;"></span>
+                    <span style="background-color: #b7b7b7;"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end deals -->
+    <!-- discount -->
+    <section class="discount">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="discount_wrapper">
+              <a href="#" class="discount_item">
+                <figure class="discount_img">
+                  <img src="images/discount/discount_1.webp" alt="">
+                </figure>
+                <div class="discount_content">
+                  <span class="discount_category">decoration</span>
+                  <h4 class="discount_title">25% OFF</h4>
+                  <button class="text_btn">
+                    <span>shop now</span>
+                    <i class="ti ti-arrow-right"></i>
+                  </button>
+                </div>
+              </a>
+              <div class="additional_services">
+                <span>additional services</span>
+                <h4>We produce corporation orders and interior items according to customer sketches</h4>
+                <a href="#" class="button"><span>leave a request</span></a>
+              </div>
+              <a href="#" class="discount_item">
+                <figure class="discount_img">
+                  <img src="images/discount/discount_2.webp" alt="">
+                </figure>
+                <div class="discount_content">
+                  <span class="discount_category">decoration</span>
+                  <h4 class="discount_title">25% OFF</h4>
+                  <button class="text_btn">
+                    <span>shop now</span>
+                    <i class="ti ti-arrow-right"></i>
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end discount -->
+    <!-- Companies -->
+    <section class="companies">
+      <div class="companies_slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <figure class="company">
+              <img src="images/companies/company_1.png" alt="" />
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="company">
+              <img src="images/companies/company_2.png" alt="" />
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="company">
+              <img src="images/companies/company_3.png" alt="" />
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="company">
+              <img src="images/companies/company_4.png" alt="" />
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="company">
+              <img src="images/companies/company_5.png" alt="" />
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="company">
+              <img src="images/companies/company_1.png" alt="" />
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="company">
+              <img src="images/companies/company_2.png" alt="" />
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure class="company">
+              <img src="images/companies/company_3.png" alt="" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Companies -->
+  </main>
+  <!-- end main -->
+  <!-- quick view modal -->
+  <div class="modal fade" id="quickView">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="quick_view_container">
+          <div class="swiper quick_view_slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="quick_view_img">
+                  <img src="images/products/product_1.webp" alt="product 1">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="quick_view_img">
+                  <img src="images/products/product_2.webp" alt="product 2">
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="quick_view_img">
+                  <img src="images/products/product_3.webp" alt="product 3">
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="quick_view_content">
+            <h4 class="quick_view_title">Wooden Dining Table</h4>
+            <span class="quick_view_price">$99.9</span>
+            <p class="quick_view_desc">This Wooden Dining Table comes with a classical and elegant design that adds a new charm and sophistication to your dining area. Its solid wood construction guarantees durability and longevity, while its smooth finish enhances its aesthetic appeal.</p>
+            <div class="quick_view_variant">
+              <small>colors: </small>
+              <div class="color-variations">
+                <span style="background-color: #a6868c;"></span>
+                <span style="background-color: #6b4950;"></span>
+              </div>
+            </div>
+            <div class="quick_view_actions">
+              <button class="button adc">
+                <i class="ti ti-garden-cart"></i>
+                <span>Add to cart</span>
+              </button>
+              <button class="button">
+                <span>Buy now</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end quick view modal -->
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer_main">
+            <div class="footer_column site_profile">
+              <a href="index.html" class="logo">
+                <img src="images/logos/logo.svg" alt="">
+              </a>
+              <hgroup>
+                <h5 class="footer_contact_no">(+800) 1234 5678 90</h5>
+                <p class="footer_address">62 North Helen Street Green Cove, FL 3204</p>
+              </hgroup>
+              <ul class="footer_contact_list">
+                <li>
+                  <span>Phone: </span>
+                  <a href="#">+123 456 7890</a>
+                </li>
+                <li>
+                  <span>Email: </span>
+                  <a href="#">example@gmail.com</a>
+                </li>
+                <li>
+                  <span>Follow Us : </span>
+                  <ul class="social_links">
+                    <li>
+                      <i class="ti ti-brand-facebook"></i>
+                    </li>
+                    <li>
+                      <i class="ti ti-brand-x"></i>
+                    </li>
+                    <li>
+                      <i class="ti ti-brand-instagram"></i>
+                    </li>
+                    <li>
+                      <i class="ti ti-brand-pinterest"></i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="footer_column footer_links">
+              <h4 class="footer_heading">information</h4>
+              <ul class="footer_list">
+                <li><a href="#" class="footer_link">About Us</a></li>
+                <li><a href="#" class="footer_link">Furniture Business</a></li>
+                <li><a href="#" class="footer_link">Help & Advice</a></li>
+                <li><a href="#" class="footer_link">Contact Us</a></li>
+                <li><a href="#" class="footer_link">Furniture Magazine</a></li>
+                <li><a href="#" class="footer_link">Gift Vouchers</a></li>
+                <li><a href="#" class="footer_link">FR Collections</a></li>
+                <li><a href="#" class="footer_link">Gallery</a></li>
+                <li><a href="#" class="footer_link">Purchase Protection</a></li>
+                <li><a href="#" class="footer_link">Brands</a></li>
+                <li><a href="#" class="footer_link">Meet Experts</a></li>
+                <li><a href="#" class="footer_link">Help Topics</a></li>
+              </ul>
+            </div>
+            <div class="footer_column subscribe_container">
+              <h4 class="footer_heading">Your Daily Source for New Offers and Best Deals!</h4>
+              <form class="subscribe">
+                <div class="subscribe_wrapper">
+                  <input type="email" placeholder="Enter your email" />
+                  <button class="button">
+                    <span>subscribe</span>
+                  </button>
+                </div>
+              </form>
+              <h4 class="footer_heading payment_method_heading">Payment methods</h4>
+              <div class="footer_payment_methods">
+                <figure class="method">
+                  <img src="images/payments/visa.svg" alt="visa" />
+                </figure>
+                <figure class="method">
+                  <img src="images/payments/amex.svg" alt="amex" />
+                </figure>
+                <figure class="method">
+                  <img src="images/payments/mastercard.svg" alt="mastercard" />
+                </figure>
+                <figure class="method">
+                  <img src="images/payments/elo.svg" alt="elo" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_copyright">
+      <div class="container">
+        <p class="copyright">@ 2024, Hayyan Ali Powered by HTML</p>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+  <script src="./js/jquery.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-ui.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

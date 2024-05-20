@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ubone - Furniture Store</title>
+  <link rel="icon" type="image/x-icon" href="./images/logos/favicon.png">
+  <link rel="stylesheet" href="./icons/tabler-icons.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/jquery-ui.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+  <!-- Toast -->
+  <div class="toast align-items-center" id="liveToast">
+    <div class="d-flex">
+      <div class="toast-body">
+        <span><i class="ti ti-check"></i></span>
+        <p>Item added to cart successfully!</p>
+      </div>
+      <button type="button" class="close" data-bs-dismiss="toast">
+        <i class="ti ti-x"></i>
+      </button>
+    </div>
+  </div>
+  <!-- End Toast -->
+  <!-- add to cart canvas -->
+  <div class="offcanvas offcanvas-end" id="addtocart">
+    <div class="offcanvas-header">
+      <h4>Shopping Cart</h4>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_1.webp" alt="Wooden Dining Table">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Wooden Dining Table</h5>
+          <p class="addtocart_product_text">$49.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_2.webp" alt="Leather Sofa">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Leather Sofa</h5>
+          <p class="addtocart_product_text">$59.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_3.webp" alt="Bedside Table">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Bedside Table</h5>
+          <p class="addtocart_product_text">$69.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_4.webp" alt="Comfortable Chair">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Comfortable Chair</h5>
+          <p class="addtocart_product_text">$79.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+      <div class="addtocart_product">
+        <figure class="addtocart_product_img">
+          <img src="./images/products/product_5.webp" alt="Bookshelf">
+        </figure>
+        <div class="addtocart_product_content">
+          <h5 class="addtocart_product_title">Bookshelf</h5>
+          <p class="addtocart_product_text">$89.99</p>
+          <p class="addtocart_product_text">qty: 5</p>
+        </div>
+        <button type="button" class="btn">
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+    </div>
+    <div class="offcanvas-footer">
+      <div class="cart_total">
+        <span>Sub Total</span>
+        <strong>$19.25</strong>
+      </div>
+      <a href="#" class="button">
+        <span>Checkout</span>
+      </a>
+      <a href="cart.html" class="viewall_cart">
+        <span>View all cart</span>
+      </a>
+    </div>
+  </div>
+  <!-- end of add to cart canvas -->
+  <!-- banner -->
+  <div class="banner hide">
+    <div class="container">
+      <div class="banner_main">
+        <h5>60 months</h5>
+        <p>Interest free financing</p>
+        <a href="#">See if you prequalify</a>
+      </div>
+    </div>
+    <i class="ti ti-x"></i>
+  </div>
+  <!-- end of banner -->
+  <!-- header -->
+  <header>
+    <div class="header_top">
+      <div class="container">
+        <div class="header_top_container">
+          <a href="index.html" class="logo">
+            <img src="images/logos/logo.svg" alt="Logo">
+          </a>
+          <form class="search">
+            <div class="search_box">
+              <input class="search_input" type="search" placeholder="Search products">
+              <i class="ti ti-search"></i>
+            </div>
+            <div class="search_result">
+              <button class="search_result_close">
+                <i class="ti ti-x"></i>
+              </button>
+              <div class="container">
+                <div class="search_keywords_wrapper">
+                  <h4>Search keywords: <span></span></h4>
+                  <div class="search_keywords">
+                    <a href="#" class="keyword">Apple</a>
+                    <a href="#" class="keyword">Microwave</a>
+                    <a href="#" class="keyword">iPhone14</a>
+                    <a href="#" class="keyword">Smartwatch</a>
+                    <a href="#" class="keyword">Macbook Pro</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="header_icons">
+            <button class="header_icon search_icon">
+              <i class="ti ti-search"></i>
+            </button>
+            <a href="login.html" class="header_icon login">
+              <i class="ti ti-user"></i>
+            </a>
+            <button class="header_icon" data-value="0">
+              <i class="ti ti-heart"></i>
+            </button>
+            <button class="header_icon" data-value="0" data-bs-toggle="offcanvas" data-bs-target="#addtocart">
+              <i class="ti ti-shopping-bag"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header_bottom">
+      <div class="container">
+        <div class="header_bottom_container">
+          <button class="button menu_btn">
+            <i class="ti ti-menu-2"></i>
+          </button>
+          <nav class="navbar">
+            <ul class="menu">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="single_category.html">Living Rooms</a></li>
+              <li><a href="single_category.html">Dining Rooms</a></li>
+              <li><a href="single_category.html">Bedrooms</a></li>
+              <li><a href="single_category.html">Mattress</a></li>
+              <li><a href="single_category.html">Patio</a></li>
+              <li><a href="single_category.html">Kids & Teens</a></li>
+              <li><a href="single_category.html">Rugs & Decor</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about_us.html">About Us</a></li>
+              <li><a href="contact_us.html">Contact Us</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Pages</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="faq's.html">FAQ's</a></li>
+                  <li><a class="dropdown-item" href="refund_policy.html">Refund Policy</a></li>
+                  <li><a class="dropdown-item" href="shipping_&_return.html">Shipping & Return</a></li>
+                  <li><a class="dropdown-item" href="store_location.html">Store Location</a></li>
+                  <li><a class="dropdown-item" href="privacy_policy.html">Privacy Policy</a></li>
+                  <li><a class="dropdown-item" href="terms_&_condition.html">Terms & Condition</a></li>
+                  <li><a class="dropdown-item" href="page_not_found.html">Page Not Found</a></li>
+                  <li><a class="dropdown-item" href="my_account.html">My Account</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end of header -->
+  <!-- main -->
+  <main>
+    <!-- single product -->
+    <section class="single_product">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="single_product_main">
+              <div class="product_images_sliders">
+                <div class="swiper product_images_slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/single_product/single_product_1.webp" alt="Image 1"></div>
+                    <div class="swiper-slide"><img src="images/single_product/single_product_2.webp" alt="Image 2"></div>
+                    <div class="swiper-slide"><img src="images/single_product/single_product_3.webp" alt="Image 3"></div>
+                    <div class="swiper-slide"><img src="images/single_product/single_product_4.webp" alt="Image 4"></div>
+                    <div class="swiper-slide"><img src="images/single_product/single_product_5.webp" alt="Image 5"></div>
+                    <div class="swiper-slide"><img src="images/single_product/single_product_6.webp" alt="Image 6"></div>
+                  </div>
+                  <div class="swiper-button-prev arrows"></div>
+                  <div class="swiper-button-next arrows"></div>
+                </div>
+                <div class="swiper product_images_thumb">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/single_product/single_product_1.webp" alt="Thumbnail 1"></div>
+                    <div class="swiper-slide"><img src="images/single_product/single_product_2.webp" alt="Thumbnail 2"></div>
+                    <div class="swiper-slide"><img src="images/single_product/single_product_3.webp" alt="Thumbnail 3"></div>
+                    <div class="swiper-slide"><img src="images/single_product/single_product_4.webp" alt="Thumbnail 4"></div>
+                    <div class="swiper-slide"><img src="images/single_product/single_product_5.webp" alt="Thumbnail 5"></div>
+                    <div class="swiper-slide"><img src="images/single_product/single_product_6.webp" alt="Thumbnail 6"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="single_product_content">
+                <div class="single_product_content_item single_product_info">
+                  <h2 class="single_product_title">Arm bar stools</h2>
+                  <div class="rating">
+                    <div class="rating_stars">
+                      <a href="#"><i class="ti ti-star"></i></a>
+                      <a href="#"><i class="ti ti-star"></i></a>
+                      <a href="#"><i class="ti ti-star"></i></a>
+                      <a href="#"><i class="ti ti-star"></i></a>
+                      <a href="#"><i class="ti ti-star"></i></a>
+                    </div>
+                    <p class="rate_text">No reviews</p>
+                  </div>
+                  <div class="single_product_price">
+                    <span class="sale_price">$30.00</span>
+                    <span class="regular_price"><del>$40.00</del></span>
+                    <span class="sale_tag">sale</span>
+                  </div>
+                  <p class="single_product_desc">All materials in our products are recycled or renewable.</p>
+                </div>
+                <div class="single_product_content_item single_product_variations">
+                  <div class="product_variation">
+                    <h4 class="variation_title">Colors:</h4>
+                    <ul class="product_variation_list">
+                      <li><button class="variation_button">Red</button></li>
+                      <li><button class="variation_button">Blue</button></li>
+                      <li><button class="variation_button">Green</button></li>
+                    </ul>
+                  </div>
+                  <div class="product_variation">
+                    <h4 class="variation_title">Sizes:</h4>
+                    <ul class="product_variation_list">
+                      <li><button class="variation_button">S</button></li>
+                      <li><button class="variation_button">M</button></li>
+                      <li><button class="variation_button">L</button></li>
+                    </ul>
+                  </div>
+                  <div class="product_variation">
+                    <h4 class="variation_title">Material:</h4>
+                    <ul class="product_variation_list">
+                      <li><button class="variation_button">Leather</button></li>
+                      <li><button class="variation_button">Fabric</button></li>
+                      <li><button class="variation_button">Velvet</button></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="single_product_content_item single_product_buying">
+                  <div class="single_product_cta">
+                    <div class="counter">
+                      <button id="decrement">
+                        <i class="ti ti-minus"></i>
+                      </button>
+                      <span id="count">0</span>
+                      <button id="increment">
+                        <i class="ti ti-plus"></i>
+                      </button>
+                    </div>
+                    <button class="button" id="liveToastBtn">
+                      <span>Add to cart</span>
+                      <i class="ti ti-garden-cart"></i>
+                    </button>
+                    <button class="button">
+                      <span>Buy Now</span>
+                    </button>
+                  </div>
+                  <div class="single_product_other_cta">
+                    <button id="wishlist">
+                      <i class="ti ti-heart"></i>
+                      <span>wishlist</span>
+                    </button>
+                    <button id="sizeguide">
+                      <i class="ti ti-file-text"></i>
+                      <span>sizeguide</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="single_product_content_item single_product_benifits">
+                  <table>
+                    <tr>
+                      <th>Delivery</th>
+                      <td>Estimated delivery time: 5-7 days</td>
+                    </tr>
+                    <tr>
+                      <th>Returns</th>
+                      <td>Within 45 days of purchase</td>
+                    </tr>
+                    <tr>
+                      <th>Sku</th>
+                      <td>445</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="single_product_content_item single_product_payment_methods">
+                  <div class="footer_payment_methods">
+                    <figure class="method">
+                      <img src="images/payments/visa.svg" alt="visa">
+                    </figure>
+                    <figure class="method">
+                      <img src="images/payments/amex.svg" alt="amex">
+                    </figure>
+                    <figure class="method">
+                      <img src="images/payments/mastercard.svg" alt="mastercard">
+                    </figure>
+                    <figure class="method">
+                      <img src="images/payments/elo.svg" alt="elo">
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- product description - rating - dimensions -->
+    <section class="single_product_details bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h2 class="heading_title">Product details</h2>
+            </div>
+            <div id="product-tabs">
+              <ul>
+                <li><a href="#description-tab">description</a></li>
+                <li><a href="#dimensions-tab">dimensions</a></li>
+                <li><a href="#reviews-tab">customer reviews</a></li>
+              </ul>
+              <div class="single_product_detail_tab" id="description-tab">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum lectus sed enim pretium bibendum. Ut facilisis libero sit amet lectus condimentum fringilla. Duis ultrices nisi id metus aliquet, a efficitur libero molestie. Nam vulputate tincidunt ipsum, id vestibulum justo tincidunt nec. Nulla facilisi. Nullam sit amet leo urna. Donec sed dictum mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla id metus magna.</p>
+              </div>
+              <div class="single_product_detail_tab" id="dimensions-tab">
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <td><strong>Vendor:</strong></td>
+                        <td>Ubone</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Type:</strong></td>
+                        <td>Minimal</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Size:</strong></td>
+                        <td>S, M, L, XL</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Color:</strong></td>
+                        <td>Brandy rose, Muddy waters</td>
+                      </tr>
+                      <tr>
+                        <td><strong>SKU:</strong></td>
+                        <td>445</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Weight:</strong></td>
+                        <td>0.2 kg</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="single_product_detail_tab" id="reviews-tab">
+                <div class="reviews_head">
+                  <h4>Reviews</h4>
+                  <button class="button" id="writeReview">
+                    <span>write a review</span>
+                  </button>
+                </div>
+                <div class="write_review_form">
+                  <h4 class="form_heading">Write Your Review</h4>
+                  <form class="review_form">
+                    <div class="form_wrapper">
+                      <div class="form_row">
+                        <div class="form_group">
+                          <label for="review_name" class="form_label">Your Name:</label>
+                          <input type="text" id="review_name" class="form_input" placeholder="Your Name">
+                        </div>
+                        <div class="form_group">
+                          <label for="review_email" class="form_label">Email:</label>
+                          <input type="email" id="review_email" class="form_input" placeholder="Your Email">
+                        </div>
+                      </div>
+                      <div class="form_group">
+                        <label for="review_text" class="form_label">Your Review:</label>
+                        <textarea id="review_text" rows="6" class="form_textarea" placeholder="Write your review here"></textarea>
+                      </div>
+                      <div class="form_row">
+                        <div class="form_group">
+                          <label for="review_rating" class="form_label">Rating:</label>
+                          <div class="rating_stars">
+                            <a href="#"><i class="ti ti-star-filled"></i></a>
+                            <a href="#"><i class="ti ti-star-filled"></i></a>
+                            <a href="#"><i class="ti ti-star-filled"></i></a>
+                            <a href="#"><i class="ti ti-star-filled"></i></a>
+                            <a href="#"><i class="ti ti-star-filled"></i></a>
+                          </div>
+                        </div>
+                        <button type="submit" class="button">Submit</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="single_product_reviews">
+                  <div class="review_card">
+                    <div class="review_card_header">
+                      <figure class="review_image">
+                        <img src="images/users/user_1.webp" alt="Reviewer Image">
+                      </figure>
+                      <div class="review_author">
+                        <h5 class="review_author_name">John Doe</h5>
+                        <span class="review_author_caption">Customer</span>
+                      </div>
+                    </div>
+                    <div class="review_card_body">
+                      <p class="review_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante magna. Ut ultricies mi a dui maximus, at condimentum nunc blandit.</p>
+                    </div>
+                    <div class="review_card_footer">
+                      <div class="rating_stars">
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                      </div>
+                      <span class="review_date">April 15, 2024</span>
+                    </div>
+                  </div>
+                  <div class="review_card">
+                    <div class="review_card_header">
+                      <figure class="review_image">
+                        <img src="images/users/user_2.webp" alt="Reviewer Image">
+                      </figure>
+                      <div class="review_author">
+                        <h5 class="review_author_name">Jane Smith</h5>
+                        <span class="review_author_caption">Customer</span>
+                      </div>
+                    </div>
+                    <div class="review_card_body">
+                      <p class="review_text">Vivamus gravida, justo eu fermentum lacinia, velit ex fringilla libero, sit amet sollicitudin lorem ligula nec justo.</p>
+                    </div>
+                    <div class="review_card_footer">
+                      <div class="rating_stars">
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                      </div>
+                      <span class="review_date">April 14, 2024</span>
+                    </div>
+                  </div>
+                  <div class="review_card">
+                    <div class="review_card_header">
+                      <figure class="review_image">
+                        <img src="images/users/user_3.webp" alt="Reviewer Image">
+                      </figure>
+                      <div class="review_author">
+                        <h5 class="review_author_name">Ahmed Khan</h5>
+                        <span class="review_author_caption">Customer</span>
+                      </div>
+                    </div>
+                    <div class="review_card_body">
+                      <p class="review_text">Integer nec ligula a dolor faucibus fringilla. Sed ac lorem vel urna ullamcorper condimentum.</p>
+                    </div>
+                    <div class="review_card_footer">
+                      <div class="rating_stars">
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                      </div>
+                      <span class="review_date">April 13, 2024</span>
+                    </div>
+                  </div>
+                  <div class="review_card">
+                    <div class="review_card_header">
+                      <figure class="review_image">
+                        <img src="images/users/user_4.webp" alt="Reviewer Image">
+                      </figure>
+                      <div class="review_author">
+                        <h5 class="review_author_name">Fatima Ali</h5>
+                        <span class="review_author_caption">Customer</span>
+                      </div>
+                    </div>
+                    <div class="review_card_body">
+                      <p class="review_text">Donec vehicula tristique ipsum, eget suscipit risus suscipit eu. Integer luctus velit non nunc lobortis lacinia.</p>
+                    </div>
+                    <div class="review_card_footer">
+                      <div class="rating_stars">
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                        <a href="#"><i class="ti ti-star-filled"></i></a>
+                      </div>
+                      <span class="review_date">April 12, 2024</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- related products -->
+    <section class="related_products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h2 class="heading_title">Related Products</h2>
+              <a href="#" class="button">
+                <span>view all</span>
+                <i class="ti ti-arrow-right"></i>
+              </a>
+            </div>
+            <div class="home_deals_products">
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_1.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Wooden Dining Table</h3>
+                  </a>
+                  <p class="price">$249.99</p>
+                  <div class="stock-status out-stock">Sold out</div>
+                  <div class="color-variations">
+                    <span style="background-color: #836953;"></span>
+                    <span style="background-color: #000000;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_2.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Leather Sofa Set</h3>
+                  </a>
+                  <p class="price">$799.99</p>
+                  <div class="stock-status in-stock">in Stock</div>
+                  <div class="color-variations">
+                    <span style="background-color: #333333;"></span>
+                    <span style="background-color: #b7b7b7;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_3.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Modern Coffee Table</h3>
+                  </a>
+                  <p class="price">$149.99</p>
+                  <div class="stock-status in-stock">in Stock</div>
+                  <div class="color-variations">
+                    <span style="background-color: #ffffff;"></span>
+                    <span style="background-color: #333333;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_4.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Antique Wooden Chair</h3>
+                  </a>
+                  <p class="price">$99.99</p>
+                  <div class="stock-status in-stock">in Stock</div>
+                  <div class="color-variations">
+                    <span style="background-color: #543b39;"></span>
+                    <span style="background-color: #a28b7c;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_5.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Modern TV Stand</h3>
+                  </a>
+                  <p class="price">$299.99</p>
+                  <div class="stock-status out-stock">Sold out</div>
+                  <div class="color-variations">
+                    <span style="background-color: #333333;"></span>
+                    <span style="background-color: #ffffff;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_6.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Classic Armchair</h3>
+                  </a>
+                  <p class="price">$199.99</p>
+                  <div class="stock-status out-stock">Sold out</div>
+                  <div class="color-variations">
+                    <span style="background-color: #7b6d64;"></span>
+                    <span style="background-color: #b4a7a2;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_7.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Rustic Bookshelf</h3>
+                  </a>
+                  <p class="price">$149.99</p>
+                  <div class="stock-status in-stock">in Stock</div>
+                  <div class="color-variations">
+                    <span style="background-color: #3a352e;"></span>
+                    <span style="background-color: #8a7d6f;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_8.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Contemporary Desk</h3>
+                  </a>
+                  <p class="price">$179.99</p>
+                  <div class="stock-status out-stock">Sold out</div>
+                  <div class="color-variations">
+                    <span style="background-color: #ffffff;"></span>
+                    <span style="background-color: #333333;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_9.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Velvet Ottoman</h3>
+                  </a>
+                  <p class="price">$79.99</p>
+                  <div class="stock-status in-stock">in Stock</div>
+                  <div class="color-variations">
+                    <span style="background-color: #6b4950;"></span>
+                    <span style="background-color: #a6868c;"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-head">
+                  <div class="product-action">
+                    <span class="ti ti-eye quick-view"></span>
+                    <span class="ti ti-heart add-wishlist"></span>
+                  </div>
+                  <a href="#">
+                    <figure>
+                      <img src="images/products/product_10.webp" alt="Product Image">
+                    </figure>
+                  </a>
+                  <button class="button" data-bs-target="#quickView" data-bs-toggle="modal">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="details">
+                  <a href="#">
+                    <h3>Industrial Bar Stool</h3>
+                  </a>
+                  <p class="price">$89.99</p>
+                  <div class="stock-status in-stock">in Stock</div>
+                  <div class="color-variations">
+                    <span style="background-color: #333333;"></span>
+                    <span style="background-color: #b7b7b7;"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- end main -->
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer_main">
+            <div class="footer_column site_profile">
+              <a href="index.html" class="logo">
+                <img src="images/logos/logo.svg" alt="">
+              </a>
+              <hgroup>
+                <h5 class="footer_contact_no">(+800) 1234 5678 90</h5>
+                <p class="footer_address">62 North Helen Street Green Cove, FL 3204</p>
+              </hgroup>
+              <ul class="footer_contact_list">
+                <li>
+                  <span>Phone: </span>
+                  <a href="#">+123 456 7890</a>
+                </li>
+                <li>
+                  <span>Email: </span>
+                  <a href="#">example@gmail.com</a>
+                </li>
+                <li>
+                  <span>Follow Us : </span>
+                  <ul class="social_links">
+                    <li>
+                      <i class="ti ti-brand-facebook"></i>
+                    </li>
+                    <li>
+                      <i class="ti ti-brand-x"></i>
+                    </li>
+                    <li>
+                      <i class="ti ti-brand-instagram"></i>
+                    </li>
+                    <li>
+                      <i class="ti ti-brand-pinterest"></i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="footer_column footer_links">
+              <h4 class="footer_heading">information</h4>
+              <ul class="footer_list">
+                <li><a href="#" class="footer_link">About Us</a></li>
+                <li><a href="#" class="footer_link">Furniture Business</a></li>
+                <li><a href="#" class="footer_link">Help & Advice</a></li>
+                <li><a href="#" class="footer_link">Contact Us</a></li>
+                <li><a href="#" class="footer_link">Furniture Magazine</a></li>
+                <li><a href="#" class="footer_link">Gift Vouchers</a></li>
+                <li><a href="#" class="footer_link">FR Collections</a></li>
+                <li><a href="#" class="footer_link">Gallery</a></li>
+                <li><a href="#" class="footer_link">Purchase Protection</a></li>
+                <li><a href="#" class="footer_link">Brands</a></li>
+                <li><a href="#" class="footer_link">Meet Experts</a></li>
+                <li><a href="#" class="footer_link">Help Topics</a></li>
+              </ul>
+            </div>
+            <div class="footer_column subscribe_container">
+              <h4 class="footer_heading">Your Daily Source for New Offers and Best Deals!</h4>
+              <form class="subscribe">
+                <div class="subscribe_wrapper">
+                  <input type="email" placeholder="Enter your email" />
+                  <button class="button">
+                    <span>subscribe</span>
+                  </button>
+                </div>
+              </form>
+              <h4 class="footer_heading payment_method_heading">Payment methods</h4>
+              <div class="footer_payment_methods">
+                <figure class="method">
+                  <img src="images/payments/visa.svg" alt="visa" />
+                </figure>
+                <figure class="method">
+                  <img src="images/payments/amex.svg" alt="amex" />
+                </figure>
+                <figure class="method">
+                  <img src="images/payments/mastercard.svg" alt="mastercard" />
+                </figure>
+                <figure class="method">
+                  <img src="images/payments/elo.svg" alt="elo" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_copyright">
+      <div class="container">
+        <p class="copyright">@ @ 2024, Hayyan Ali Powered by HTML</p>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+  <script src="./js/jquery.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-ui.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
