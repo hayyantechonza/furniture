@@ -556,14 +556,6 @@ input[type="password"] {
   /* display: none; */
 }
 
-.banner .ti {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: clamp(14px, 2vw, 16px);
-}
-
 .banner_main {
   display: flex;
   padding: 7px;
