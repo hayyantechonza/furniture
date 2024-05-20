@@ -138,15 +138,40 @@ $(function() {
     },
   });
 
+  var extraOffersProducts = new Swiper('.extra_offers_products', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    grabCursor: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 15
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
+    }
+  });
+
   var singleCategorySlider = new Swiper('.single_category_slider', {
     slidesPerView: 1,
     loop: true,
     spaceBetween: 10,
     grabCursor: true,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     speed: 800,
     pagination: {
       el: '.swiper-pagination',
@@ -240,9 +265,9 @@ $(function() {
     }
   });
 
-  $('#liveToastBtn').click(function(){
-      $('#liveToast').toast('show');
-    });
+  $('#liveToastBtn').click(function() {
+    $('#liveToast').toast('show');
+  });
 });
 
 // price range filter
@@ -321,37 +346,3 @@ const reviewForm = () => {
     }
   });
 }
-// marquee animation
-function Marquee(selector, speed) {
-  const parentSelector = $(selector);
-  const clone = parentSelector.html();
-  const firstElement = parentSelector.children().first();
-  let i = 0;
-  let marqueeInterval;
-
-  parentSelector.append(clone);
-  parentSelector.append(clone);
-  parentSelector.append(clone);
-  parentSelector.append(clone);
-
-  function startMarquee() {
-    marqueeInterval = setInterval(function() {
-      firstElement.css('margin-left', `-${i}px`);
-      if (i > firstElement.width()) {
-        i = 0;
-      }
-      i = i + speed;
-    }, 0);
-  }
-
-  function stopMarquee() {
-    clearInterval(marqueeInterval);
-  }
-
-  parentSelector.on('mouseenter', stopMarquee);
-  parentSelector.on('mouseleave', startMarquee);
-
-  startMarquee();
-}
-
-$(window).on('load', () => Marquee('.marquee', 0.2));

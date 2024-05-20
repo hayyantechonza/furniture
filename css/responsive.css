@@ -396,7 +396,7 @@
 
 @media (max-width: 600px) {
   .home_deals_products {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
   }
 
   .product-card figure {
