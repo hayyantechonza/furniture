@@ -71,7 +71,7 @@ $(function() {
   var dealSlider = new Swiper('.deal_slider', {
     slidesPerView: 1,
     loop: true,
-    spaceBetween: 2,
+    spaceBetween: 20,
     grabCursor: true,
     autoplay: {
       delay: 5000,
