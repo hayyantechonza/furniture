@@ -43,7 +43,7 @@ $(function() {
   });
 
   $(".search_icon").click(() => {
-    $(".search").addClass("active")
+    $(".search").slideToggle();
   });
 
   $(".search").click((e) => {
@@ -79,15 +79,12 @@ $(function() {
     },
     speed: 800,
     breakpoints: {
-      // jab screen ki width 576px ya kam ho
       576: {
         slidesPerView: 1,
       },
-      // jab screen ki width 768px ya kam ho
       768: {
         slidesPerView: 2,
       },
-      // jab screen ki width 992px ya kam ho
       992: {
         slidesPerView: 3,
       },
@@ -139,10 +136,11 @@ $(function() {
   });
 
   var extraOffersProducts = new Swiper('.extra_offers_products', {
-    slidesPerView: 1,
+    slidesPerView: "auto",
     spaceBetween: 20,
     loop: true,
     grabCursor: true,
+    centeredSlides: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -150,14 +148,17 @@ $(function() {
     breakpoints: {
       576: {
         slidesPerView: 2,
+        centeredSlides: false,
         spaceBetween: 10
       },
       768: {
         slidesPerView: 3,
+        centeredSlides: false,
         spaceBetween: 15
       },
       1024: {
         slidesPerView: 3,
+        centeredSlides: false,
         spaceBetween: 20
       }
     }

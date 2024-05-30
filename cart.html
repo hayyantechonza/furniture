@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ubone - Furniture Store</title>
-  <link rel="icon" type="image/x-icon" href="./images/logos/favicon.png">
+  <title>Furniture - Furniture Store</title>
+  <link rel="icon" type="image/x-icon" href="./images/logos/favicon.svg">
   <link rel="stylesheet" href="./icons/tabler-icons.css">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
@@ -103,25 +103,25 @@
   </div>
   <!-- end of add to cart canvas -->
   <!-- banner -->
-  <div class="banner py-1 d-sm-block d-none">
+  <div class="banner py-2 d-sm-block">
     <div class="container">
       <div class="row">
-          <div class="col-sm-4">
-            <div class="d-flex align-items-center justify-content-start gap-2">
-              <p class="small">Free Shipping Above $300</p>
-            </div>
-          </div>
-          <div class="col-sm-4 d-none d-sm-block">
-            <div class="d-flex align-items-center justify-content-center gap-2">
-              <p class="small">info.sofia@sofia.ae</p>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="d-flex align-items-center justify-content-end gap-2">
-              <p class="small">+1 (424) 433-3993</p>
-            </div>
+        <div class="col-sm-4 col-6">
+          <div class="d-flex align-items-center justify-content-start gap-2">
+            <p class="small">Free Shipping Above $300</p>
           </div>
         </div>
+        <div class="col-sm-4 d-none d-sm-block">
+          <div class="d-flex align-items-center justify-content-center gap-2">
+            <p class="small">info.sofia@sofia.ae</p>
+          </div>
+        </div>
+        <div class="col-sm-4 col-6">
+          <div class="d-flex align-items-center justify-content-end gap-2">
+            <p class="small">+1 (424) 433-3993</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- end of banner -->
@@ -163,12 +163,12 @@
             <a href="login.html" class="header_icon login">
               <i class="ti ti-user"></i>
             </a>
-            <button class="header_icon" data-value="0">
-              <i class="ti ti-heart"></i>
-            </button>
             <button class="header_icon" data-value="0" data-bs-toggle="offcanvas" data-bs-target="#addtocart">
               <i class="ti ti-shopping-bag"></i>
             </button>
+          <button class="button menu_btn">
+            <i class="ti ti-menu-2"></i>
+          </button>
           </div>
         </div>
       </div>
@@ -176,9 +176,6 @@
     <div class="header_bottom">
       <div class="container">
         <div class="header_bottom_container">
-          <button class="button menu_btn">
-            <i class="ti ti-menu-2"></i>
-          </button>
           <nav class="navbar">
             <ul class="menu">
               <li class="active"><a href="index.html">Home</a></li>
@@ -192,19 +189,6 @@
               <li><a href="shop.html">Shop</a></li>
               <li><a href="about_us.html">About Us</a></li>
               <li><a href="contact_us.html">Contact Us</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle">Pages</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="faq's.html">FAQ's</a></li>
-                  <li><a class="dropdown-item" href="refund_policy.html">Refund Policy</a></li>
-                  <li><a class="dropdown-item" href="shipping_&_return.html">Shipping & Return</a></li>
-                  <li><a class="dropdown-item" href="store_location.html">Store Location</a></li>
-                  <li><a class="dropdown-item" href="privacy_policy.html">Privacy Policy</a></li>
-                  <li><a class="dropdown-item" href="terms_&_condition.html">Terms & Condition</a></li>
-                  <li><a class="dropdown-item" href="page_not_found.html">Page Not Found</a></li>
-                  <li><a class="dropdown-item" href="my_account.html">My Account</a></li>
-                </ul>
-              </li>
             </ul>
           </nav>
         </div>
@@ -225,128 +209,117 @@
               </a>
             </div>
             <div class="cart_wrapper">
-              <table class="table cart_table">
-                <thead>
-                  <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="table_cell">
-                        <div class="addtocart_product">
-                          <figure class="addtocart_product_img">
-                            <img src="./images/products/product_1.webp" alt="Wooden Dining Table">
-                          </figure>
-                          <div class="addtocart_product_content">
-                            <h5 class="addtocart_product_title">Wooden Dining Table</h5>
-                            <p class="addtocart_product_text">$49.99</p>
-                            <p class="addtocart_product_text">Color: Green</p>
+              <div class="table-responsive">
+                <table class="table cart_table">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="table_cell">
+                          <div class="addtocart_product">
+                            <button type="button" class="btn p-0">
+                              <i class="ti ti-trash"></i>
+                            </button>
+                            <figure class="addtocart_product_img">
+                              <img src="./images/products/product_1.webp" alt="Wooden Dining Table">
+                            </figure>
+                            <div class="addtocart_product_content">
+                              <h5 class="addtocart_product_title webkit_box">Wooden Dining Table</h5>
+                              <p class="addtocart_product_text">$49.99</p>
+                              <p class="addtocart_product_text">Color: Green</p>
+                              <div class="counter">
+                                <button id="decrement">
+                                  <i class="ti ti-minus"></i>
+                                </button>
+                                <span id="count">1</span>
+                                <button id="increment">
+                                  <i class="ti ti-plus"></i>
+                                </button>
+                              </div>
+                            </div>
                           </div>
-                          <button type="button" class="btn">
-                            <i class="ti ti-trash"></i>
-                          </button>
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="table_cell">
-                        <div class="counter">
-                          <button id="decrement">
-                            <i class="ti ti-minus"></i>
-                          </button>
-                          <span id="count">1</span>
-                          <button id="increment">
-                            <i class="ti ti-plus"></i>
-                          </button>
+                      </td>
+                      <td>
+                        <div class="table_cell">
+                          $49.99
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="table_cell">
-                        $40.2
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="table_cell">
-                        <div class="addtocart_product">
-                          <figure class="addtocart_product_img">
-                            <img src="./images/products/product_2.webp" alt="Sofa Set">
-                          </figure>
-                          <div class="addtocart_product_content">
-                            <h5 class="addtocart_product_title">Sofa Set</h5>
-                            <p class="addtocart_product_text">$199.99</p>
-                            <p class="addtocart_product_text">Color: Blue</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table_cell">
+                          <div class="addtocart_product">
+                            <button type="button" class="btn p-0">
+                              <i class="ti ti-trash"></i>
+                            </button>
+                            <figure class="addtocart_product_img">
+                              <img src="./images/products/product_2.webp" alt="Leather Sofa">
+                            </figure>
+                            <div class="addtocart_product_content">
+                              <h5 class="addtocart_product_title webkit_box">Leather Sofa</h5>
+                              <p class="addtocart_product_text">$399.99</p>
+                              <p class="addtocart_product_text">Color: Black</p>
+                              <div class="counter">
+                                <button id="decrement">
+                                  <i class="ti ti-minus"></i>
+                                </button>
+                                <span id="count">1</span>
+                                <button id="increment">
+                                  <i class="ti ti-plus"></i>
+                                </button>
+                              </div>
+                            </div>
                           </div>
-                          <button type="button" class="btn">
-                            <i class="ti ti-trash"></i>
-                          </button>
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="table_cell">
-                        <div class="counter">
-                          <button id="decrement">
-                            <i class="ti ti-minus"></i>
-                          </button>
-                          <span id="count">1</span>
-                          <button id="increment">
-                            <i class="ti ti-plus"></i>
-                          </button>
+                      </td>
+                      <td>
+                        <div class="table_cell">
+                          $399.99
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="table_cell">
-                        $299.99
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="table_cell">
-                        <div class="addtocart_product">
-                          <figure class="addtocart_product_img">
-                            <img src="./images/products/product_3.webp" alt="Coffee Table">
-                          </figure>
-                          <div class="addtocart_product_content">
-                            <h5 class="addtocart_product_title">Coffee Table</h5>
-                            <p class="addtocart_product_text">$79.99</p>
-                            <p class="addtocart_product_text">Color: Brown</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table_cell">
+                          <div class="addtocart_product">
+                            <button type="button" class="btn p-0">
+                              <i class="ti ti-trash"></i>
+                            </button>
+                            <figure class="addtocart_product_img">
+                              <img src="./images/products/product_3.webp" alt="Glass Coffee Table">
+                            </figure>
+                            <div class="addtocart_product_content">
+                              <h5 class="addtocart_product_title webkit_box">Glass Coffee Table</h5>
+                              <p class="addtocart_product_text">$89.99</p>
+                              <p class="addtocart_product_text">Color: Clear</p>
+                              <div class="counter">
+                                <button id="decrement">
+                                  <i class="ti ti-minus"></i>
+                                </button>
+                                <span id="count">1</span>
+                                <button id="increment">
+                                  <i class="ti ti-plus"></i>
+                                </button>
+                              </div>
+                            </div>
                           </div>
-                          <button type="button" class="btn">
-                            <i class="ti ti-trash"></i>
-                          </button>
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="table_cell">
-                        <div class="counter">
-                          <button id="decrement">
-                            <i class="ti ti-minus"></i>
-                          </button>
-                          <span id="count">1</span>
-                          <button id="increment">
-                            <i class="ti ti-plus"></i>
-                          </button>
+                      </td>
+                      <td>
+                        <div class="table_cell">
+                          $89.99
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="table_cell">
-                        $159.96
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <div class="cart_footer">
                 <div class="cart_note">
                   <label for="note" class="form-label">Order special instructions</label>

@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ubone - Furniture Store</title>
-  <link rel="icon" type="image/x-icon" href="./images/logos/favicon.png">
+  <title>Furniture - Furniture Store</title>
+  <link rel="icon" type="image/x-icon" href="./images/logos/favicon.svg">
   <link rel="stylesheet" href="./icons/tabler-icons.css">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
@@ -102,25 +102,25 @@
   </div>
   <!-- end of add to cart canvas -->
   <!-- banner -->
-  <div class="banner py-1 d-sm-block d-none">
+  <div class="banner py-2 d-sm-block">
     <div class="container">
       <div class="row">
-          <div class="col-sm-4">
-            <div class="d-flex align-items-center justify-content-start gap-2">
-              <p class="small">Free Shipping Above $300</p>
-            </div>
-          </div>
-          <div class="col-sm-4 d-none d-sm-block">
-            <div class="d-flex align-items-center justify-content-center gap-2">
-              <p class="small">info.sofia@sofia.ae</p>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="d-flex align-items-center justify-content-end gap-2">
-              <p class="small">+1 (424) 433-3993</p>
-            </div>
+        <div class="col-sm-4 col-6">
+          <div class="d-flex align-items-center justify-content-start gap-2">
+            <p class="small">Free Shipping Above $300</p>
           </div>
         </div>
+        <div class="col-sm-4 d-none d-sm-block">
+          <div class="d-flex align-items-center justify-content-center gap-2">
+            <p class="small">info.sofia@sofia.ae</p>
+          </div>
+        </div>
+        <div class="col-sm-4 col-6">
+          <div class="d-flex align-items-center justify-content-end gap-2">
+            <p class="small">+1 (424) 433-3993</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- end of banner -->
@@ -162,12 +162,12 @@
             <a href="login.html" class="header_icon login">
               <i class="ti ti-user"></i>
             </a>
-            <button class="header_icon" data-value="0">
-              <i class="ti ti-heart"></i>
-            </button>
             <button class="header_icon" data-value="0" data-bs-toggle="offcanvas" data-bs-target="#addtocart">
               <i class="ti ti-shopping-bag"></i>
             </button>
+          <button class="button menu_btn">
+            <i class="ti ti-menu-2"></i>
+          </button>
           </div>
         </div>
       </div>
@@ -175,9 +175,6 @@
     <div class="header_bottom">
       <div class="container">
         <div class="header_bottom_container">
-          <button class="button menu_btn">
-            <i class="ti ti-menu-2"></i>
-          </button>
           <nav class="navbar">
             <ul class="menu">
               <li class="active"><a href="index.html">Home</a></li>
@@ -191,19 +188,6 @@
               <li><a href="shop.html">Shop</a></li>
               <li><a href="about_us.html">About Us</a></li>
               <li><a href="contact_us.html">Contact Us</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle">Pages</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="faq's.html">FAQ's</a></li>
-                  <li><a class="dropdown-item" href="refund_policy.html">Refund Policy</a></li>
-                  <li><a class="dropdown-item" href="shipping_&_return.html">Shipping & Return</a></li>
-                  <li><a class="dropdown-item" href="store_location.html">Store Location</a></li>
-                  <li><a class="dropdown-item" href="privacy_policy.html">Privacy Policy</a></li>
-                  <li><a class="dropdown-item" href="terms_&_condition.html">Terms & Condition</a></li>
-                  <li><a class="dropdown-item" href="page_not_found.html">Page Not Found</a></li>
-                  <li><a class="dropdown-item" href="my_account.html">My Account</a></li>
-                </ul>
-              </li>
             </ul>
           </nav>
         </div>
@@ -596,9 +580,6 @@
                       <div class="details">
                         <a href="single_product.html" class="product-title">
                           <h3>LED Smart TV</h3>
-                          <button>
-                            <span class="ti ti-heart quick-view"></span>
-                          </button>
                         </a>
                         <div class="price">
                           <span>$599.99</span>
@@ -630,9 +611,6 @@
                       <div class="details">
                         <a href="single_product.html" class="product-title">
                           <h3>Wireless Bluetooth Earbuds</h3>
-                          <button>
-                            <span class="ti ti-heart quick-view"></span>
-                          </button>
                         </a>
                         <div class="price">
                           <span>$49.99</span>
@@ -664,9 +642,6 @@
                       <div class="details">
                         <a href="single_product.html" class="product-title">
                           <h3>Stainless Steel Kitchenware Set</h3>
-                          <button>
-                            <span class="ti ti-heart quick-view"></span>
-                          </button>
                         </a>
                         <div class="price">
                           <span>$79.99</span>
@@ -835,9 +810,6 @@
                 <div class="details">
                   <a href="single_product.html" class="product-title">
                     <h3>Wooden Dining Table</h3>
-                    <button>
-                      <span class="ti ti-heart quick-view"></span>
-                    </button>
                   </a>
                   <div class="price">
                     <span>$99.996</span>
@@ -873,9 +845,6 @@
                 <div class="details">
                   <a href="single_product.html" class="product-title">
                     <h3>Modern Sofa Set</h3>
-                    <button>
-                      <span class="ti ti-heart quick-view"></span>
-                    </button>
                   </a>
                   <div class="price">
                     <span>$299.99</span>
@@ -910,9 +879,6 @@
                 <div class="details">
                   <a href="single_product.html" class="product-title">
                     <h3>Leather Recliner Chair</h3>
-                    <button>
-                      <span class="ti ti-heart quick-view"></span>
-                    </button>
                   </a>
                   <div class="price">
                     <span>$199.99</span>
@@ -947,9 +913,6 @@
                 <div class="details">
                   <a href="single_product.html" class="product-title">
                     <h3>Adjustable Office Chair</h3>
-                    <button>
-                      <span class="ti ti-heart quick-view"></span>
-                    </button>
                   </a>
                   <div class="price">
                     <span>$129.99</span>
@@ -984,9 +947,6 @@
                 <div class="details">
                   <a href="single_product.html" class="product-title">
                     <h3>LED Smart TV</h3>
-                    <button>
-                      <span class="ti ti-heart quick-view"></span>
-                    </button>
                   </a>
                   <div class="price">
                     <span>$599.99</span>
@@ -1021,9 +981,6 @@
                 <div class="details">
                   <a href="single_product.html" class="product-title">
                     <h3>Wireless Bluetooth Earbuds</h3>
-                    <button>
-                      <span class="ti ti-heart quick-view"></span>
-                    </button>
                   </a>
                   <div class="price">
                     <span>$49.99</span>
@@ -1058,9 +1015,6 @@
                 <div class="details">
                   <a href="single_product.html" class="product-title">
                     <h3>Stainless Steel Kitchenware Set</h3>
-                    <button>
-                      <span class="ti ti-heart quick-view"></span>
-                    </button>
                   </a>
                   <div class="price">
                     <span>$79.99</span>
@@ -1095,9 +1049,6 @@
                 <div class="details">
                   <a href="single_product.html" class="product-title">
                     <h3>Cotton Bedding Set</h3>
-                    <button>
-                      <span class="ti ti-heart quick-view"></span>
-                    </button>
                   </a>
                   <div class="price">
                     <span>$39.99</span>
